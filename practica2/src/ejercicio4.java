@@ -13,6 +13,10 @@ public class ejercicio4 {
         for (int i = 0; i < a.length; i++){
             suma = suma + a[i];
         }
+
+        double media = (double) suma / (double) a.length;
+
         System.out.println("La suma de todos los números es: " + suma);
+        System.out.println("La media de todos los números es: " + media);
     }
 }
