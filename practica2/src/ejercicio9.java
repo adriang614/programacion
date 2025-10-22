@@ -17,7 +17,7 @@ public class ejercicio9 {
             a[i] = sc.nextInt();
         }
 
-        //Recorra el array para encontrar el valor minimo, máximo y sus posiciones.
+        //Recorrer el array para encontrar el valor minimo, máximo y sus posiciones.
         int max = a[0];
         int posmax = 0;
         int min =  a[0];
@@ -33,7 +33,7 @@ public class ejercicio9 {
             }
         }
 
-        //Muestra el resultado en consola.
+        //Mostrar el resultado en consola.
         System.out.println("Valor máximo: " + max + " en la posición: " + posmax);
         System.out.println("Valor mínimo: " + min + " en la posición: " + posmin);
     }
