@@ -19,7 +19,7 @@ public class ejercicio8 {
             n = sc.nextInt();
         }
 
-        // Ahora que n es válido, creamos el array
+        //Creamos el array sabiendo que n es valido
         int[] a = new int[n];
 
         //Calcular la altura media
