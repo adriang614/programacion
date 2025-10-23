@@ -39,6 +39,6 @@ programacion/
 
 **Adrián Gónzalez Cumbreras**
 
-![Texto alternativo](ruta/de/la/imagen)
+![Logo de java](java.png)
 
 ---
