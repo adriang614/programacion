@@ -4,8 +4,6 @@
 // Utiliza un array para los nombres de los alumnos y otro para las notas.
 // ¿Serías capaz de hacerlo con un array Bidimensional?
 
-package src;
-
 import java.util.Scanner;
 
 public class ejercicio10 {
