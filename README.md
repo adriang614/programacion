@@ -1,4 +1,7 @@
-# ⌨️🖱️ Programación – 1º DAW
+<h1 style="display: flex; align-items: center; gap: 10px;">
+  ⌨️🖱️ Programación – 1º DAW
+  <img src="java.png" alt="Logo de Java" width="40">
+</h1>
 
 Este repositorio es para el m de **Programación** del curso **1º de DAW**.  
 Aquí iré subiendo las prácticas y ejercicios que hagamos a lo largo del curso, usando **Java** como lenguaje de programación.
@@ -38,7 +41,5 @@ programacion/
 ### 🧑‍💻 Autor
 
 **Adrián Gónzalez Cumbreras**
-
-![Logo de java](java.png)
 
 ---
