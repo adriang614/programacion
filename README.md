@@ -16,6 +16,7 @@ Aquí iré subiendo las prácticas y ejercicios que hagamos a lo largo del curso
 ---
 
 ## 🧱 Estructura generada del repositorio
+
 ```plaintext
 programacion/
 ├── README.md              # Explicación del repositorio y su estructura
@@ -35,6 +36,6 @@ programacion/
 ---
 
 ### 🧑‍💻 Autor
-Adrián Gónzalez Cumbreras
 
+Adrián Gónzalez Cumbreras
 1º DAW – Módulo de Programación
