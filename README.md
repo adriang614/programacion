@@ -1,7 +1,6 @@
-<h1 style="display: flex; justify-content: space-between; align-items: center;">
-  ⌨️🖱️ Programación – 1º DAW
-  <img src="java.png" alt="Logo de Java" width="60" height="60">
-</h1>
+# ⌨️🖱️ Programación – 1º DAW
+
+![Logo de java](java.png)
 
 Este repositorio es para el m de **Programación** del curso **1º de DAW**.  
 Aquí iré subiendo las prácticas y ejercicios que hagamos a lo largo del curso, usando **Java** como lenguaje de programación.
