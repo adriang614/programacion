@@ -35,5 +35,6 @@ programacion/
 ---
 
 ### 🧑‍💻 Autor
-Adrián Gónzalez Cumbreras.
+Adrián Gónzalez Cumbreras
+
 1º DAW – Módulo de Programación
