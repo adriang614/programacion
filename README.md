@@ -1,6 +1,6 @@
-<h1 style="display: flex; align-items: center; gap: 10px;">
+<h1 style="display: flex; align-items: center; gap: 12px;">
   ⌨️🖱️ Programación – 1º DAW
-  <img src="java.png" alt="Logo de Java" width="40">
+  <img src="java.png" alt="Logo de Java" width="60" height="60">
 </h1>
 
 Este repositorio es para el m de **Programación** del curso **1º de DAW**.  
