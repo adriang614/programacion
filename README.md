@@ -16,6 +16,7 @@ Aquí iré subiendo las prácticas y ejercicios que hagamos a lo largo del curso
 ---
 
 ## 🧱 Estructura generada del repositorio
+```plaintext
 programacion/
 ├── README.md              # Explicación del repositorio y su estructura
 ├── .gitignore             # Exclusión de carpetas como bin/ o archivos temporales
@@ -30,9 +31,9 @@ programacion/
 │       ├── ejercicio2.java
 │       └── ...
 └── (más prácticas...)     # Cada práctica tiene su propia carpeta y rama que despues se mergea a main
-
+```
 ---
 
 ### 🧑‍💻 Autor
-Adrián Gónzalez Cumbreras
+Adrián Gónzalez Cumbreras.
 1º DAW – Módulo de Programación
