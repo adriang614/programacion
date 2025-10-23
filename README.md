@@ -1,4 +1,4 @@
-<h1 style="display: flex; align-items: center; gap: 12px;">
+<h1 style="display: flex; justify-content: space-between; align-items: center;">
   ⌨️🖱️ Programación – 1º DAW
   <img src="java.png" alt="Logo de Java" width="60" height="60">
 </h1>
