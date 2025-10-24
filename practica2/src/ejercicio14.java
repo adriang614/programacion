@@ -29,6 +29,7 @@ public class ejercicio14 {
         System.out.println("¿Qué nombre quieres buscar?");
         String nombre_buscado = sc.nextLine();
 
+        //cambiar
         if (listaS.contains(nombre_buscado)){
             int posicion = listaS.indexOf(nombre_buscado);
             System.out.println(nombre_buscado + " está en la lista en la posición: " + posicion);
