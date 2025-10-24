@@ -9,7 +9,7 @@ public class ejercicio11 {
         Scanner sc = new Scanner(System.in);
 
         //Crear array de tamaño 6
-        int valores[] = {1,2,3,4,5,6};
+        int [] valores = {1,2,3,4,5,6};
         int[] invertido = new int[6];
 
         //Inventir el array
