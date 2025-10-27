@@ -1,4 +1,4 @@
-# Práctica 02 – Java II: Operaciones con Arrays
+# Práctica 2 – Java II: Operaciones con Arrays
 
 ---
 
