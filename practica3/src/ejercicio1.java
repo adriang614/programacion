@@ -4,26 +4,48 @@
 // se muestra en la figura.
 public class ejercicio1 {
 
-    public static void main (String[] args){
+    public static void main(String[] args) {
         double[][] doub = {
-                {0.0,30.0,2.0,0.0,0.0,5.0},
-                {75.0,0.0,0.0,0.0,0.0,0.0},
-                {0.0,0.0,-2.0,9.0,0.0,11.0},
+                {0.0, 30.0, 2.0, 0.0, 0.0, 5.0},
+                {75.0, 0.0, 0.0, 0.0, 0.0, 0.0},
+                {0.0, 0.0, -2.0, 9.0, 0.0, 11.0},
         };
 
-        System.out.printf("%-10s","Array num");
-
-        for (int i = 0; i < 7; i++) {
-            System.out.printf("%-10s", " Columna " + i);
+        // Cabecera de columnas
+        System.out.print("-----------------");
+        for (int i = 0; i < 6; i++) {
+            System.out.print("----------------");
         }
-
         System.out.println();
 
-        //Mostrar el contenido en tabla
+        System.out.printf("| %-13s |", "Array num");
+        for (int i = 0; i < 6; i++) {
+            System.out.printf(" %-13s |", "Columna " + i);
+        }
+        System.out.println();
+
+        System.out.print("-----------------");
+        for (int i = 0; i < 6; i++) {
+            System.out.print("----------------");
+        }
+        System.out.println();
+
+        // Contenido de filas
         for (int i = 0; i < doub.length; i++) {
-            System.out.print("Fila " + i);
+            System.out.printf("| %-13s |", "Fila " + i);
             for (int j = 0; j < doub[i].length; j++) {
-                System.out.printf("%-10f", doub[i][j]);
+                if (doub[i][j] == 0.0 && !(i == 0 && j == 0) && !(i == 1 && j == 4)) {
+                    System.out.printf(" %-13s |", "");
+                } else {
+                    System.out.printf(" %-13.0f |", doub[i][j]);
+                }
+            }
+            System.out.println();
+
+            // Línea separadora entre filas
+            System.out.print("-----------------");
+            for (int k = 0; k < 6; k++) {
+                System.out.print("----------------");
             }
             System.out.println();
         }
