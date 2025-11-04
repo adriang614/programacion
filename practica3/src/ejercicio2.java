@@ -6,14 +6,51 @@
 import java.util.Scanner;
 
 public class ejercicio2 {
-    public static void main (String[] args){
+    public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
 
-        //Solicitar 20 números enteros
+        int filas = 4;
+        int columnas = 5;
+        int[][] numeros = new int[filas][columnas];
 
-        for (int i = 0; i < 21; i++) {
-            sc
+        // Pedir 20 números
+        System.out.println("Introduce 20 números enteros:");
+        for (int i = 0; i < filas; i++) {
+            for (int j = 0; j < columnas; j++) {
+                System.out.print("Número [" + i + "][" + j + "]: ");
+                numeros[i][j] = sc.nextInt();
+            }
         }
+
+        // Mostrar la tabla con sumas de filas
+        int sumaTotal = 0;
+
+        for (int i = 0; i < filas; i++) {
+            int sumaFila = 0;
+
+            for (int j = 0; j < columnas; j++) {
+                System.out.printf("%7d", numeros[i][j]);
+                sumaFila += numeros[i][j];
+            }
+
+            System.out.printf(" | Σ fila %d = %d\n", i, sumaFila);
+            sumaTotal += sumaFila;
+        }
+
+        // Separador
+        System.out.println("-------------------------------------------------------------");
+
+        // Calcular y mostrar suma de cada columna
+        for (int j = 0; j < columnas; j++) {
+            int sumaColumna = 0;
+            for (int i = 0; i < filas; i++) {
+                sumaColumna += numeros[i][j];
+            }
+            System.out.printf("%7d", sumaColumna);
+        }
+
+        // Mostrar la suma total
+        System.out.printf(" | TOTAL = %d\n", sumaTotal);
     }
 }
