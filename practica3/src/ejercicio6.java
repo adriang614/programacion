@@ -2,16 +2,35 @@
 //además de que tiene que estar comprendido en un rango entre 20-40.
 
 public class ejercicio6 {
-    public static void main (String[] args){
+    public static void main(String[] args) {
         int filas = 6;
         int columnas = 10;
         int[][] a = new int[filas][columnas];
 
-        // Rellenar array con números que estén entre el 0 y el 1000
+        // Creamos un array con los números del 20 al 40
+        int[] numeros = new int[21];
+        for (int i = 0; i < 21; i++) {
+            numeros[i] = 20 + i;
+        }
+
+        // Mezclamos los números aleatoriamente
+        for (int i = 0; i < numeros.length; i++) {
+            int aleatorio = (int)(Math.random() * numeros.length);
+            int aux = numeros[i];
+            numeros[i] = numeros[aleatorio];
+            numeros[aleatorio] = aux;
+        }
+
+        // Rellenar el array con los números sin repetir
+        int indice = 0;
         for (int i = 0; i < filas; i++) {
             for (int j = 0; j < columnas; j++) {
-                int aleatorio = (int) (Math.random()*21 + 20);
-                a[i][j] = aleatorio;
+                if (indice < numeros.length) {
+                    a[i][j] = numeros[indice];
+                    indice++;
+                } else {
+                    a[i][j] = 0; // valor vacío
+                }
             }
         }
 
@@ -22,47 +41,49 @@ public class ejercicio6 {
         int filaMin = 0;
         int colMin = 0;
 
-        // Calcular máximo, minimo y sus posiciones
+        // Buscar máximo y mínimo (ignorando los 0)
         for (int i = 0; i < filas; i++) {
             for (int j = 0; j < columnas; j++) {
-                if (a[i][j] > max) {
-                    max = a[i][j];
-                    filaMax = i;
-                    colMax = j;
-                }
-                if (a[i][j] < min) {
-                    min = a[i][j];
-                    filaMin = i;
-                    colMin = j;
+                if (a[i][j] != 0) {
+                    if (a[i][j] > max) {
+                        max = a[i][j];
+                        filaMax = i;
+                        colMax = j;
+                    }
+                    if (a[i][j] < min) {
+                        min = a[i][j];
+                        filaMin = i;
+                        colMin = j;
+                    }
                 }
             }
         }
 
-        // Calcular la suma de cada fila y la suma total de las filas
+        // Suma de filas
         int[] sumasFilas = new int[filas];
         int sumaTotFil = 0;
         for (int i = 0; i < filas; i++) {
-            int sumaFila = 0;
+            int suma = 0;
             for (int j = 0; j < columnas; j++) {
-                sumaFila += a[i][j];
+                suma += a[i][j];
             }
-            sumasFilas[i] = sumaFila;
-            sumaTotFil += sumaFila;
+            sumasFilas[i] = suma;
+            sumaTotFil += suma;
         }
 
-        // Calcular la suma de cada columna y la suma total de las columnas
+        // Suma de columnas
         int[] sumasColumnas = new int[columnas];
         int sumaTotCol = 0;
         for (int j = 0; j < columnas; j++) {
-            int sumaCol = 0;
+            int suma = 0;
             for (int i = 0; i < filas; i++) {
-                sumaCol += a[i][j];
+                suma += a[i][j];
             }
-            sumasColumnas[j] = sumaCol;
-            sumaTotCol += sumaCol;
+            sumasColumnas[j] = suma;
+            sumaTotCol += suma;
         }
 
-        // Mostrar tabla con sumas incluidas
+        // Mostrar tabla
         System.out.println("--------------------------------------------------------------------------------");
         System.out.print("       ");
         for (int j = 0; j < columnas; j++) {
@@ -74,7 +95,11 @@ public class ejercicio6 {
         for (int i = 0; i < filas; i++) {
             System.out.printf("Fila %-2d|", i);
             for (int j = 0; j < columnas; j++) {
-                System.out.printf("%4d ", a[i][j]);
+                if (a[i][j] == 0) {
+                    System.out.print("     "); // celda vacía (espacio en blanco)
+                } else {
+                    System.out.printf("%4d ", a[i][j]);
+                }
             }
             System.out.printf("| %5d\n", sumasFilas[i]);
         }
@@ -87,7 +112,6 @@ public class ejercicio6 {
         System.out.printf("| %5d (Total)\n", (sumaTotCol + sumaTotFil));
         System.out.println("--------------------------------------------------------------------------------");
 
-        // Mostrar máximo y mínimo fuera de la tabla
         System.out.println("\nNúmero máximo: " + max + " en posición [" + filaMax + "][" + colMax + "]");
         System.out.println("Número mínimo: " + min + " en posición [" + filaMin + "][" + colMin + "]");
     }
