@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 //Crear un programa que cuando se le introduzca números enteros rellene
 // un array de 6 filas por 10 columnas con números enteros positivos comprendidos
 // entre 0 y 1000 (ambos incluidos).
@@ -10,7 +8,6 @@ import java.util.Scanner;
 // la suma de todas las filas.
 public class ejercicio5 {
     public static void main (String[] args){
-        Scanner sc = new Scanner(System.in);
 
         int filas = 6;
         int columnas = 10;
