@@ -11,7 +11,7 @@ public class ejercicio4 {
         // Rellenar array con numeros aleatorios
         for (int i = 0; i < filas; i++) {
             for (int j = 0; j < columnas; j++) {
-                int aleatorio = (int) (Math.random()*1999 + 1);
+                int aleatorio = (int) (Math.random()*2000);
                 numeros[i][j] = aleatorio;
             }
         }
@@ -26,7 +26,7 @@ public class ejercicio4 {
                 System.out.printf("%7d", numeros[i][j]);
                 sumaFila += numeros[i][j];
             }
-            Thread.sleep(900);
+            Thread.sleep(900);     //Ordenador piensa antes de mostrar el resultado
             System.out.printf(" | fila %d = %d\n", i, sumaFila);
             sumaTotal += sumaFila;
         }
@@ -40,12 +40,12 @@ public class ejercicio4 {
             for (int i = 0; i < filas; i++) {
                 sumaColumna += numeros[i][j];
             }
-            Thread.sleep(900);
+            Thread.sleep(900);    //Ordenador piensa antes de mostrar el resultado
             System.out.printf("%7d", sumaColumna);
         }
 
         // Mostrar la suma total
-        Thread.sleep(900);
+        Thread.sleep(900);    //Ordenador piensa antes de mostrar el resultado
         System.out.printf(" | TOTAL = %d\n", sumaTotal);
     }
 }
