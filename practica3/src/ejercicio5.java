@@ -16,7 +16,7 @@ public class ejercicio5 {
         // Rellenar array con números que estén entre el 0 y el 1000
         for (int i = 0; i < filas; i++) {
             for (int j = 0; j < columnas; j++) {
-                int aleatorio = (int) (Math.random()*1000 + 1);
+                int aleatorio = (int) (Math.random()*1001);
                 a[i][j] = aleatorio;
             }
         }
@@ -27,6 +27,7 @@ public class ejercicio5 {
         int filaMin = 0;
         int colMin = 0;
 
+        // Calcular máximo, minimo y mostrar sus posciones
         for (int i = 0; i < filas; i++) {
             for (int j = 0; j < columnas; j++) {
                 if (a[i][j] > max) {
@@ -44,7 +45,7 @@ public class ejercicio5 {
         System.out.println("Número máximo: " + max + " en posición [" + filaMax + "][" + colMax + "]");
         System.out.println("Número mínimo: " + min + " en posición [" + filaMin + "][" + colMin + "]");
 
-
+        // Calcular la suma de cada fila y la suma total de las filas
         System.out.println("Suma de cada fila:");
         int sumaTotFil = 0;
         for (int i = 0; i < filas; i++) {
@@ -57,6 +58,7 @@ public class ejercicio5 {
         }
         System.out.println ("La suma total de las filas es: " + sumaTotFil);
 
+        // Calcular la suma de cada columna y la suma total de las columnas
         System.out.println("Suma de cada columna: ");
         int sumaTotCol = 0;
         for (int j = 0; j < columnas; j++) {
@@ -69,6 +71,7 @@ public class ejercicio5 {
         }
         System.out.println ("La suma total de las columnas es: " + sumaTotFil);
 
+        // Calcular la suma total de filas y columnas
         System.out.println ("La suma total de las filas y las columnas es: " + (sumaTotCol + sumaTotFil));
     }
 }
