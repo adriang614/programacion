@@ -10,7 +10,7 @@ public class ejercicio3 {
         // Rellenar array con numeros aleatorios
         for (int i = 0; i < filas; i++) {
             for (int j = 0; j < columnas; j++) {
-                int aleatorio = (int) (Math.random()*1999 + 1);
+                int aleatorio = (int) (Math.random()*2000);
                 numeros[i][j] = aleatorio;
             }
         }
