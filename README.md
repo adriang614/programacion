@@ -22,7 +22,7 @@ Aquí iré subiendo las prácticas y ejercicios que hagamos a lo largo del curso
 ```plaintext
 programacion/
 ├── README.md              # Explicación del repositorio y su estructura
-├── .gitignore             # Exclusión de carpetas como bin/ o archivos temporales
+├── .gitignore             # Exclusión de carpetas como out o .idea
 ├── practica1/             # Carpeta con los ejercicios de la práctica 1
 │   └── src/
 │       ├── ejercicio1.java
