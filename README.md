@@ -33,7 +33,12 @@ programacion/
 │       ├── ejercicio1.java
 │       ├── ejercicio2.java
 │       └── ...
-└── (más prácticas...)     # Cada práctica tiene su propia carpeta y rama que despues se mergea a main
+├── estudio/               # Rama y carpeta con ejercicios de repaso y práctica personal
+│   └── src/
+│       ├── EjercicioRepaso1.java
+│       ├── EjercicioRepaso2.java
+│       └── ...
+└── (más prácticas...)     # Cada práctica tiene su propia carpeta y rama que después se mergea a main
 ```
 ---
 
