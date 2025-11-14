@@ -17,7 +17,7 @@ Aquí iré subiendo las prácticas y ejercicios que hagamos a lo largo del curso
 
 ---
 
-## 🧱 Estructura generada del repositorio
+## 🧱 Estructura del repositorio
 
 ```plaintext
 programacion/
