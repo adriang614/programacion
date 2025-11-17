@@ -1,55 +1,75 @@
 public class Usuario {
-
-    //ATRIBUTOS locales de la clase (Significa que por ejemplo desde el main no lo puedo llamar)
+    //Atributos
     private String nombre;
     private String apellidos;
-    private String codigoPostal;
+    private String codigopostal;
     private String direccion;
     private String email;
-    private String contraseña;
+    private String contrasena;
 
 
-    //CONSTRUCTOR
-    public Usuario(String n, String a, String c, String d, String e, String p){
+    //Contructor:
+    public Usuario(String n, String a, String c, String d, String e, String p) {
         this.nombre = n;
         this.apellidos = a;
-        this.codigoPostal = c;
+        this.codigopostal = c;
         this.direccion = d;
         this.email = e;
-        this.contraseña = p;
+        this.contrasena = p;
     }
+    //Metodo get
 
-    //MÉTODOS GET Y SET
     public String getNombre() {
-        return this.nombre;
+        return nombre;
     }
-
-    public void setNombre(String nuevoNombre) {
+    public  void setNombre(String nuevoNombre) {
         this.nombre = nuevoNombre;
     }
 
-    public String getEmail(){
-        return this.email;
+    public String getApellidos() {
+        return apellidos;
+    }
+    public void setApellidos(String nuevoApellido) {
+        this.apellidos = nuevoApellido;
     }
 
-    public void setEmail (String nuevoEmail){
-        if (nuevoEmail.contains("@")){
+    public String getCodigopostal() {
+        return codigopostal;
+    }
+    public void setCodigopostal (String nuevoCodigopostal) {
+        this.codigopostal = nuevoCodigopostal;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+    public void setDireccion(String nuevoDireccion) {
+        this.direccion = nuevoDireccion;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+    public void setEmail(String nuevoEmail) {
+        if (email.contains("@")) {
             this.email = nuevoEmail;
         }
         else {
-            System.out.println("No es posible");
+            System.out.println("El email no es valido no contiene [@]");
         }
     }
 
-    //METODO TOSTRING
+    public String getContrasena() {
+        return contrasena;
+    }
+    public void setContrasena (String nuevoContrasena) {
+        this.contrasena = nuevoContrasena;
+    }
+    public boolean checkusuario(String email, String contrasena) {
+        return this.email.equals(email) && this.contrasena.equals(contrasena);
+    }
+    //Metodo TOSTRING
     public String toString(){
-        return this.nombre + " " + this.apellidos + " " + this.codigoPostal + " " + this.email;
+        return "El nombre es: "+ this.nombre+" "+this.apellidos+" y el email es "+this.email+" "+this.codigopostal+" "+this.direccion+" "+this.contrasena;
     }
-
-    //METODO CHECKUSUARIO
-    public  Boolean checkUsuario (String email, String contraseña){
-        return this.getEmail().equals(email) && this.contraseña.equals(contraseña);
-    }
-
 }
-
