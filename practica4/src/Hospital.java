@@ -4,12 +4,12 @@ public class Hospital {
 
     //ATRIBUTOS
     private String nombre;
-    private Integer cif;
+    private String cif;
+    private Direccion d;
     private ArrayList<Area> areas;
-    private  Direccion d;
 
     //CONSTRUCTOR
-    public Hospital (String n, Integer cif, Direccion d){
+    public Hospital (String n, String cif, Direccion d, ArrayList<Area> areas){
         this.nombre = n;
         this.cif = cif;
         this.d = d;
@@ -18,46 +18,36 @@ public class Hospital {
 
 
     //METODO GET
-    public String getCalle() {
-        return calle;
+    public String getNombre() {
+        return nombre;
     }
 
-    public Integer getNumero() {
-        return numero;
+    public String getCif() {
+        return cif;
     }
 
-    public Integer getCodigoPostal() {
-        return codigoPostal;
+    public Direccion getD() {
+        return d;
     }
 
-    public String getLocalidad() {
-        return localidad;
+    public ArrayList<Area> getAreas() {
+        return areas;
     }
-
-    public String getProvincia() {
-        return provincia;
-    }
-
 
     //METODO SET
-    public void setCalle(String calle) {
-        this.calle = calle;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public void setNumero(Integer numero) {
-        this.numero = numero;
+    public void setCif(String cif) {
+        this.cif = cif;
     }
 
-    public void setCodigoPostal(Integer codigoPostal) {
-        this.codigoPostal = codigoPostal;
+    public void setD(Direccion d) {
+        this.d = d;
     }
 
-    public void setLocalidad(String localidad) {
-        this.localidad = localidad;
+    public void setAreas(ArrayList<Area> areas) {
+        this.areas = areas;
     }
-
-    public void setProvincia(String provincia) {
-        this.provincia = provincia;
-    }
-}
 }
