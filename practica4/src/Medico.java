@@ -103,7 +103,14 @@ public class Medico {
     }
 
     //METODO AREA
-    public Area cambiarArea(Area nuevaArea){
+    public void cambiarArea(Area nuevaArea){
+        // Primero restamos el médico del área actual
+        this.area.restaMedicos();
 
+        // Cambiamos el área del médico
+        this.area = nuevaArea;
+
+        // Sumamos el médico al área nueva
+        this.area.sumaMedicos();
     }
 }

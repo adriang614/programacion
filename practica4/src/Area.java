@@ -61,4 +61,10 @@ public class Area {
     public void sumaMedicos(){
         this.numMedicos ++;
     }
+
+    //FUNCION RESTA MEDICOS
+    public void restaMedicos(){
+        this.numMedicos --;
+    }
+
 }
