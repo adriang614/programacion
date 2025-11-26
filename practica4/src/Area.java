@@ -67,4 +67,24 @@ public class Area {
         this.numMedicos --;
     }
 
+    //METODO COMPROBACION Y COMPARACION
+    public String compararMedicos (Area otraArea) {
+        if (this.numMedicos > otraArea.getNumMedicos()){
+            return "El area " + this.nombre + " tiene más médicos que " + otraArea.getNombre();
+        } else {
+            return "El area " + otraArea.getNombre() + " tiene más médicos que " + this.nombre;
+        }
+    }
+
+    //METODO CAPACIDAD
+    public int calcularCapacidadRestante(int capacidadMaxima) {
+        int result = 0;
+        if (this.numMedicos < capacidadMaxima) {
+            int x = capacidadMaxima - this.numMedicos;
+            System.out.println("El número de médicos que puede recibir el área antes de alcanzar el límite es: ");
+            result = x;
+        }
+        return result;
+    }
+
 }
