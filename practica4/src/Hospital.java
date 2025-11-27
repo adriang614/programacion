@@ -50,4 +50,17 @@ public class Hospital {
     public void setAreas(ArrayList<Area> areas) {
         this.areas = areas;
     }
+
+    //METODO CALCULO AGREGADO
+    public int getNumeroTotalMedicos() {
+        int total = 0;
+        for (int i = 0; i < areas.size(); i++) {
+            total += areas.get(i).getNumMedicos();
+        }
+        return total;
+    }
+
+    //METODO CALCULO DE PROPORCION
+
+
 }

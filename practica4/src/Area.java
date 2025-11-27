@@ -81,9 +81,9 @@ public class Area {
         int result = 0;
         if (this.numMedicos < capacidadMaxima) {
             int x = capacidadMaxima - this.numMedicos;
-            System.out.println("El número de médicos que puede recibir el área antes de alcanzar el límite es: ");
             result = x;
         }
+        System.out.println("El número de médicos que puede recibir el área antes de alcanzar el límite es: ");
         return result;
     }
 
