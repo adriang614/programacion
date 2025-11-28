@@ -61,6 +61,33 @@ public class Hospital {
     }
 
     //METODO CALCULO DE PROPORCION
+    public double getProporcionMedicosArea(String idArea) {
+        int totalMedicos = getNumeroTotalMedicos();
 
+        if (totalMedicos == 0) {
+            return 0;
+        }
+
+        for (int i = 0; i < areas.size(); i++) {
+            Area a = areas.get(i);
+
+            if (a.getIdentificador().equals(idArea)) {
+                return (double) a.getNumMedicos() / totalMedicos;
+            }
+        }
+
+        return 0;
+    }
+
+    //METODO DE EXISTENCIA
+    public boolean existeArea(String idArea) {
+        for (int i = 0; i < areas.size(); i++) {
+            Area a = areas.get(i);
+            if (a.getIdentificador().equals(idArea)) {
+                return true;
+            }
+        }
+        return false;
+    }
 
 }

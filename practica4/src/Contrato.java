@@ -1,18 +1,18 @@
 public class Contrato {
     //ATRIBUTOS
-    private String fechaCreacion;
+    private Integer fechaCreacion;
     private Medico medico;
     private Hospital hospital;
 
     //CONSTRUCTOR
-    public Contrato (String fC, Medico m, Hospital h){
+    public Contrato (Integer fC, Medico m, Hospital h){
         this.fechaCreacion = fC;
         this.medico = m;
         this.hospital = h;
     }
 
     //METODO GET
-    public String getFechaCreacion() {
+    public Integer getFechaCreacion() {
         return fechaCreacion;
     }
 
@@ -25,7 +25,7 @@ public class Contrato {
     }
 
     //METODO SET
-    public void setFechaCreacion(String fechaCreacion) {
+    public void setFechaCreacion(Integer fechaCreacion) {
         this.fechaCreacion = fechaCreacion;
     }
 
@@ -35,5 +35,21 @@ public class Contrato {
 
     public void setHospital(Hospital hospital) {
         this.hospital = hospital;
+    }
+
+    //METODO COMPROBACION DE AÑO
+    public boolean esDeAnio(int anio) {
+        if (this.fechaCreacion == anio) {
+            return true;
+        }
+        return false;
+    }
+
+    //METODO CALCULO DE VIGENCIA
+    public int diasDesdeCreacion() {
+        int anioActual = 2025;
+        int diferenciaAnios = anioActual - this.fechaCreacion;
+
+        return diferenciaAnios * 365;
     }
 }
