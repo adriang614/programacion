@@ -1,4 +1,3 @@
-import java.time.LocalDate;
 import java.util.Scanner;
 
 public class Medico {
@@ -72,7 +71,8 @@ public class Medico {
 
     //METODO SUELDO NETO
     public double calcularSueldo(double retencion) {
-        double sueldoNeto = sueldoBruto * (retencion / 100);
+        double resta = sueldoBruto * (retencion / 100);
+        double sueldoNeto = sueldoBruto - resta;
         return sueldoNeto;
     }
 

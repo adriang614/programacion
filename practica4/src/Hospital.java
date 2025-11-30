@@ -13,7 +13,7 @@ public class Hospital {
         this.nombre = n;
         this.cif = cif;
         this.d = d;
-        this.areas = new ArrayList<Area>();
+        this.areas = areas;
     }
 
 

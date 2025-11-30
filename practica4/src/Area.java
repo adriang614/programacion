@@ -1,13 +1,13 @@
 public class Area {
     //ATRIBUTOS
     private String nombre;
-    private Integer identificador;
+    private String identificador;
     private Integer planta;
     private Hospital hospital;
     private Integer numMedicos;
 
     //CONSTRUCTOR
-    public Area (String n, Integer i, Integer p, Hospital h){
+    public Area (String n, String i, Integer p, Hospital h){
         this.nombre = n;
         this.identificador = i;
         this.planta = p;
@@ -20,7 +20,7 @@ public class Area {
         return nombre;
     }
 
-    public Integer getIdentificador() {
+    public String getIdentificador() {
         return identificador;
     }
 
@@ -41,7 +41,7 @@ public class Area {
         this.nombre = nombre;
     }
 
-    public void setIdentificador(Integer identificador) {
+    public void setIdentificador(String identificador) {
         this.identificador = identificador;
     }
 
@@ -83,7 +83,6 @@ public class Area {
             int x = capacidadMaxima - this.numMedicos;
             result = x;
         }
-        System.out.println("El número de médicos que puede recibir el área antes de alcanzar el límite es: ");
         return result;
     }
 
