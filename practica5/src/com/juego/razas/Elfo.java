@@ -1,4 +1,4 @@
 package com.juego.razas;
 
-public class Elfo {
+public class Elfo implements Raza {
 }

@@ -1,4 +1,4 @@
 package com.juego.habilidades;
 
-public class CuraCC {
+public class CuraCC implements Habilidad {
 }

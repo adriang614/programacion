@@ -1,4 +1,4 @@
 package com.juego.habilidades;
 
-public interface InRaza {
+public interface Habilidad {
 }

@@ -9,7 +9,7 @@ public class Clase {
     private int defensa;
     private int rapidez;
 
-    //CONTRUCTOR
+    //----------CONSTRUCTOR----------
     public Clase(int fuerza, int destreza, int inteligencia, int vida, int vidaMax, int defensa, int rapidez) {
         this.fuerza = fuerza;
         this.destreza = destreza;
@@ -20,7 +20,7 @@ public class Clase {
         this.rapidez = rapidez;
     }
 
-    //GET Y SET
+    //----------GET Y SET----------
 
     public int getFuerza() {
         return fuerza;

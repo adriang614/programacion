@@ -25,13 +25,13 @@ programacion/
 ├── .gitignore             # Exclusión de carpetas como bin/ o archivos temporales
 ├── practica1/             # Carpeta con los ejercicios de la práctica 1
 │   └── src/
-│       ├── ejercicio1.java
-│       ├── ejercicio2.java
+│       ├── ejercicio1p3.java
+│       ├── ejercicio2p3.java
 │       └── ...
 ├── practica2/             # Carpeta con los ejercicios de la práctica 2
 │   └── src/
-│       ├── ejercicio1.java
-│       ├── ejercicio2.java
+│       ├── ejercicio1p3.java
+│       ├── ejercicio2p3.java
 │       └── ...
 ├── estudio/               # Rama y carpeta con ejercicios de repaso y práctica personal
 │   └── src/

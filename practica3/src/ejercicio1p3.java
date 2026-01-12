@@ -2,7 +2,7 @@
 // la siguiente tabla.
 // Muestra el contenido de todos los elementos del array dispuestos en forma de tabla como
 // se muestra en la figura.
-public class ejercicio1 {
+public class ejercicio1p3 {
 
     public static void main(String[] args) {
         double[][] doub = {
@@ -12,8 +12,7 @@ public class ejercicio1 {
         };
 
         // Cabecera de columnas
-        System.out.print("-----------------");
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < 7; i++) {
             System.out.print("----------------");
         }
         System.out.println();
@@ -24,8 +23,7 @@ public class ejercicio1 {
         }
         System.out.println();
 
-        System.out.print("-----------------");
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < 7; i++) {
             System.out.print("----------------");
         }
         System.out.println();

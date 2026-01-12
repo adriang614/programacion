@@ -1,4 +1,4 @@
 package com.juego.razas;
 
-public class Humano {
+public class Humano implements Raza{
 }

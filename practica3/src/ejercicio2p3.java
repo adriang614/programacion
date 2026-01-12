@@ -1,17 +1,25 @@
-// Modifica el programa anterior de tal forma que los números que se introducen
-// en el array se generen de forma aleatoria (valores entre 1 y 1999).
-public class ejercicio3 {
+//Escribe un programa que solicite 20 números enteros.
+// Estos números debemos de introducirlo en un array de 4 filas por 5 columnas.
+// El programa mostrará las sumas parciales de filas y en las columnas el mayor número de la columna.
+// La suma total debe aparecer en la esquina inferior derecha.
+
+import java.util.Scanner;
+
+public class ejercicio2p3 {
     public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
 
         int filas = 4;
         int columnas = 5;
         int[][] numeros = new int[filas][columnas];
 
-        // Rellenar array con numeros aleatorios
+        // Pedir 20 números
+        System.out.println("Introduce 20 números enteros:");
         for (int i = 0; i < filas; i++) {
             for (int j = 0; j < columnas; j++) {
-                int aleatorio = (int) (Math.random()*2000);
-                numeros[i][j] = aleatorio;
+                System.out.print("Número [" + i + "][" + j + "]: ");
+                numeros[i][j] = sc.nextInt();
             }
         }
 
@@ -26,7 +34,7 @@ public class ejercicio3 {
                 sumaFila += numeros[i][j];
             }
 
-            System.out.printf(" | fila %d = %d\n", i, sumaFila);
+            System.out.printf(" | Σ fila %d = %d\n", i, sumaFila);
             sumaTotal += sumaFila;
         }
 

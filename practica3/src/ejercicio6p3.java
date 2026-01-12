@@ -1,7 +1,7 @@
 //Modifica el programa anterior de tal forma que no se repita ningún número en el array
 //además de que tiene que estar comprendido en un rango entre 20-40.
 
-public class ejercicio6 {
+public class ejercicio6p3 {
     public static void main(String[] args) {
         int filas = 6;
         int columnas = 10;
