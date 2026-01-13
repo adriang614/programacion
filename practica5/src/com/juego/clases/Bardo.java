@@ -1,8 +1,15 @@
 package com.juego.clases;
 
-public class Bardo extends Clase {
+import com.juego.modelo.Personaje;
+
+public class Bardo extends Clase implements IClase {
     //----------CONSTRUCTOR----------
     public Bardo() {
-        super(1, 2, 3, 90, 90, 1, 2);
+        super(0, 0, 3, 90, 90, 0, 0);
+    }
+
+    @Override
+    public void aplicarbonificador(Personaje p) {
+        p.setInteligencia(getInteligencia() + this.getInteligencia());
     }
 }

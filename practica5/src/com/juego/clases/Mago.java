@@ -1,8 +1,15 @@
 package com.juego.clases;
 
-public class Mago extends Clase {
+import com.juego.modelo.Personaje;
+
+public class Mago extends Clase implements IClase {
     //----------CONSTRUCTOR----------
     public Mago() {
-        super(0, 1, 3, 90, 90, 1, 1);
+        super(0, 0, 3, 90, 90, 0, 0);
+    }
+
+    @Override
+    public void aplicarbonificador(Personaje p) {
+        p.setInteligencia(getInteligencia() + this.getInteligencia());
     }
 }
