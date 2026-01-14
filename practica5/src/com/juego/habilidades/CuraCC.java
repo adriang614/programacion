@@ -1,23 +1,25 @@
 package com.juego.habilidades;
 
-public class CuraCC implements Habilidad {
+import com.juego.modelo.Personaje;
+
+public class CuraCC implements Habilidad{
 
     //----------ATRIBUTOS----------
     private String nombre;
     private int usos;
+    private int usosMax;
     private String descripcion;
     private int valor;
-    private int escalabilidad;
-    private int coste;
+    private String escalabilidad;
 
     //----------CONSTRUCTOR----------
-    public CuraCC(String nombre, int usos, String descripcion, int valor, int escalabilidad, int coste) {
+    public CuraCC(String nombre, int usosMax, String descripcion, int valor, String escalabilidad) {
         this.nombre = nombre;
-        this.usos = usos;
+        this.usos = usosMax;
+        this.usosMax = usosMax;
         this.descripcion = descripcion;
         this.valor = valor;
         this.escalabilidad = escalabilidad;
-        this.coste = coste;
     }
 
     //----------GET Y SET----------
@@ -37,6 +39,14 @@ public class CuraCC implements Habilidad {
         this.usos = usos;
     }
 
+    public int getUsosMax() {
+        return usosMax;
+    }
+
+    public void setUsosMax(int usosMax) {
+        this.usosMax = usosMax;
+    }
+
     public String getDescripcion() {
         return descripcion;
     }
@@ -53,24 +63,22 @@ public class CuraCC implements Habilidad {
         this.valor = valor;
     }
 
-    public int getEscalabilidad() {
+    public String getEscalabilidad() {
         return escalabilidad;
     }
 
-    public void setEscalabilidad(int escalabilidad) {
+    public void setEscalabilidad(String escalabilidad) {
         this.escalabilidad = escalabilidad;
-    }
-
-    public int getCoste() {
-        return coste;
-    }
-
-    public void setCoste(int coste) {
-        this.coste = coste;
     }
 
     @Override
     public boolean usar() {
         return false;
     }
+
+    @Override
+    public int escalado(Personaje p) {
+        return 0;
+    }
 }
+
