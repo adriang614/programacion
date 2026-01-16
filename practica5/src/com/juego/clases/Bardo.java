@@ -1,5 +1,8 @@
 package com.juego.clases;
 
+import com.juego.habilidades.CuraCC;
+import com.juego.habilidades.DanioCC;
+import com.juego.habilidades.DanioLD;
 import com.juego.modelo.Personaje;
 
 public class Bardo extends Clase implements IClase {
@@ -8,6 +11,14 @@ public class Bardo extends Clase implements IClase {
         super(0, 0, 3, 90, 90, 0, 0);
     }
 
+
+    //----------HABILIDADES BARDO----------
+    DanioCC PuaDeFuria = new DanioCC("PuaDeFuria", 5, "Golpea con la guitarra a ritmo de taconeo, desbordando fuerza y estilo", 25, "destreza");
+    DanioLD LamentoGitano = new DanioLD("LamentoGitano", 1, "Canta con fuerza y rabia, proyectando energia a distancia contra sus enemigos", 50, "destreza");
+    CuraCC SoloDelCanelita = new CuraCC("SoloDelCanelita", 3, "Canta con alma, devolviendo energia y vitalidad a si mismo", 30, "inteligencia");
+
+
+    //----------APLICAR BONIFICADOR DE CLASE----------
     @Override
     public void aplicarbonificador(Personaje p) {
         p.setInteligencia(getInteligencia() + this.getInteligencia());

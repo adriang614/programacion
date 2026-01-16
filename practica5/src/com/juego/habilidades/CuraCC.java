@@ -78,7 +78,25 @@ public class CuraCC implements Habilidad{
 
     @Override
     public int escalado(Personaje p) {
-        return 0;
+        double bonus = 0;
+        switch (escalabilidad){
+            case "fuerza":
+                bonus = p.getFuerza() * 1.4;
+                break;
+
+            case "destreza":
+                bonus = p.getDestreza() * 1.3;
+                break;
+
+            case "intelligencia":
+                bonus = p.getInteligencia() * 1.3;
+                break;
+
+            case "defensa":
+                bonus = p.getDefensa() * 1.8;
+                break;
+        }
+        return (int) Math.round(bonus);
     }
 }
 
