@@ -9,6 +9,9 @@ public class Bardo extends Clase implements IClase {
     //----------CONSTRUCTOR----------
     public Bardo() {
         super(0, 0, 3, 90, 90, 0, 0);
+        getHabilidades().add(PuaDeFuria);
+        getHabilidades().add(LamentoGitano);
+        getHabilidades().add(SoloDelCanelita);
     }
 
 

@@ -9,6 +9,9 @@ public class Picaro extends Clase implements IClase {
     //----------CONSTRUCTOR----------
     public Picaro() {
         super(0, 3, 0, 105, 105, 0, 0);
+        getHabilidades().add(ApuñaladaPorLaEspalda);
+        getHabilidades().add(CuchilloVolador);
+        getHabilidades().add(RobarVenda);
     }
 
 

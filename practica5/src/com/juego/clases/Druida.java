@@ -9,6 +9,9 @@ public class Druida extends Clase implements IClase {
     //----------CONSTRUCTOR----------
     public Druida() {
         super(2, 0, 1, 100, 100, 0, 0);
+        getHabilidades().add(ZarpazoVerde);
+        getHabilidades().add(PitiHumeante);
+        getHabilidades().add(InfusionDeHierbas);
     }
 
 

@@ -1,5 +1,9 @@
 package com.juego.clases;
 
+import com.juego.habilidades.Habilidad;
+import java.util.ArrayList;
+import java.util.List;
+
 public class Clase {
     private int fuerza;
     private int destreza;
@@ -8,6 +12,7 @@ public class Clase {
     private int vidaMax;
     private int defensa;
     private int rapidez;
+    private List<Habilidad> habilidades = new ArrayList<>();
 
     //----------CONSTRUCTOR----------
     public Clase(int fuerza, int destreza, int inteligencia, int vida, int vidaMax, int defensa, int rapidez) {
@@ -76,5 +81,9 @@ public class Clase {
 
     public void setRapidez(int rapidez) {
         this.rapidez = rapidez;
+    }
+
+    public List<Habilidad> getHabilidades() {
+        return habilidades;
     }
 }

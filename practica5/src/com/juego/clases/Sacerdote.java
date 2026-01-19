@@ -10,6 +10,9 @@ public class Sacerdote extends Clase implements IClase {
     //----------CONSTRUCTOR----------
     public Sacerdote() {
         super(0, 0, 3, 95, 95, 0, 0);
+        getHabilidades().add(PuñetazoSagrado);
+        getHabilidades().add(BibliaVoladora);
+        getHabilidades().add(RezoSanador);
     }
 
 

@@ -9,6 +9,9 @@ public class Mago extends Clase implements IClase {
     //----------CONSTRUCTOR----------
     public Mago() {
         super(0, 0, 3, 90, 90, 0, 0);
+        getHabilidades().add(HechizoConcentrado);
+        getHabilidades().add(HechizoPreciso);
+        getHabilidades().add(ConjuroCurativo);
     }
 
 

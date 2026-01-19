@@ -9,6 +9,9 @@ public class Paladin extends Clase implements IClase {
     //----------CONSTRUCTOR----------
     public Paladin() {
         super(2, 0, 1, 115, 115, 0, 0);
+        getHabilidades().add(GolpeDeJuramento);
+        getHabilidades().add(Veredicto);
+        getHabilidades().add(DisciplinaDeAcero);
     }
 
 

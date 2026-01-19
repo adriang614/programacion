@@ -1,7 +1,10 @@
 package com.juego.modelo;
 
 import com.juego.clases.Clase;
+import com.juego.habilidades.Habilidad;
 import com.juego.razas.Raza;
+
+import java.util.List;
 
 public class Personaje {
 
@@ -16,19 +19,22 @@ public class Personaje {
     private int rapidez;
     private Clase clase;
     private Raza raza;
+    private List<Habilidad> habilidades;
+
 
     //----------CONSTRUCTOR----------
-    public Personaje(String nombre, int vidaMax, int fuerza, int destreza, int inteligencia, int defensa, int rapidez, Clase clase, Raza raza) {
+    public Personaje(String nombre, Clase clase, Raza raza) {
         this.nombre = nombre;
-        this.vida = vidaMax;
-        this.vidaMax = vidaMax;
-        this.fuerza = fuerza;
-        this.destreza = destreza;
-        this.inteligencia = inteligencia;
-        this.defensa = defensa;
-        this.rapidez = rapidez;
         this.clase = clase;
         this.raza = raza;
+        this.fuerza = raza.getFuerzaBase();
+        this.destreza = raza.getDestrezaBase();
+        this.inteligencia = raza.getInteligenciaBase();
+        this.defensa = raza.getDefensaBase();
+        this.rapidez = raza.getRapidezBase();
+        this.vidaMax = clase.getVidaMax() + raza.getVidaBase();
+        this.vida = this.vidaMax;
+        this.habilidades = clase.getHabilidades();
     }
 
     //----------GET Y SET----------

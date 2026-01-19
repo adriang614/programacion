@@ -9,6 +9,9 @@ public class Monje extends Clase implements IClase {
     //----------CONSTRUCTOR----------
     public Monje() {
         super(2, 1, 0, 110, 110, 0, 0);
+        getHabilidades().add(PunoZen);
+        getHabilidades().add(LanzaChi);
+        getHabilidades().add(MeditaciónCurativa);
     }
 
 

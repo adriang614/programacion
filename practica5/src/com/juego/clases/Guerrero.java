@@ -9,6 +9,9 @@ public class Guerrero extends Clase implements IClase {
     //----------CONSTRUCTOR----------
     public Guerrero() {
         super(3, 0, 0, 120, 120, 0, 0);
+        getHabilidades().add(OstionGitano);
+        getHabilidades().add(EmbestidaDelLeón);
+        getHabilidades().add(Resiliencia);
     }
 
 

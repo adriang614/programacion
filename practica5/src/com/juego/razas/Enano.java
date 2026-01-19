@@ -4,60 +4,21 @@ import com.juego.modelo.Personaje;
 
 public class Enano implements Raza {
 
-    //----------ATRIBUTOS----------
-    private int fuerza;
-    private int inteligencia;
-    private int destreza;
-    private int vidaBase;
-    private String especialidad;
-
-    //----------CONSTRUCTOR----------
-    public Enano() {
-        this.fuerza = 7;
-        this.inteligencia = 4;
-        this.destreza = 4;
-        this.vidaBase = 110;
-        this.especialidad = "Resistencia: Ideal para Guerreros y Paladines.";
-    }
-
-    //----------GETTERS Y SETTERS----------
-    public int getFuerza() {
-        return fuerza;
-    }
-
-    public void setFuerza(int fuerza) {
-        this.fuerza = fuerza;
-    }
-
-    public int getInteligencia() {
-        return inteligencia;
-    }
-
-    public void setInteligencia(int inteligencia) {
-        this.inteligencia = inteligencia;
-    }
-
-    public int getDestreza() {
-        return destreza;
-    }
-
-    public void setDestreza(int destreza) {
-        this.destreza = destreza;
-    }
-
-    public int getVidaBase() {
-        return vidaBase;
-    }
-
-    public void setVidaBase(int vidaBase) {
-        this.vidaBase = vidaBase;
-    }
+    @Override
+    public int getVidaBase() { return 110; }
 
     @Override
-    public void bonificadorRaza(Personaje p) {
-        p.setInteligencia(getInteligencia() + this.getInteligencia());
-        p.setFuerza(getFuerza() + this.getFuerza());
-        p.setDestreza(getDestreza() + this.getDestreza());
-        p.setVida(getFuerza() + this.getVidaBase());
-    }
+    public int getFuerzaBase() { return 7; }
+
+    @Override
+    public int getDestrezaBase() { return 4; }
+
+    @Override
+    public int getInteligenciaBase() { return 4; }
+
+    @Override
+    public int getDefensaBase() { return 6; }
+
+    @Override
+    public int getRapidezBase() { return 4; }
 }
