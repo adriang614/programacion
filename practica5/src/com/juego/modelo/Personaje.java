@@ -23,10 +23,10 @@ public class Personaje {
 
 
     //----------CONSTRUCTOR----------
-    public Personaje(String nombre, Clase clase, Raza raza) {
+    public Personaje(String nombre, Raza raza, Clase clase,) {
         this.nombre = nombre;
-        this.clase = clase;
         this.raza = raza;
+        this.clase = clase;
         this.fuerza = raza.getFuerzaBase();
         this.destreza = raza.getDestrezaBase();
         this.inteligencia = raza.getInteligenciaBase();

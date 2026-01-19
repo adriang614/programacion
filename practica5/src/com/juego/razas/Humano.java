@@ -4,6 +4,10 @@ import com.juego.modelo.Personaje;
 
 public class Humano implements Raza {
 
+    public Humano() {
+
+    }
+
     @Override
     public int getVidaBase() { return 100; }
 
