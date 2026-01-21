@@ -9,16 +9,19 @@ public class Combate {
     public Combate (Personaje p1, Personaje p2){
         this.p1 = p1;
         this.p2 = p2;
+        inciarCombate(p1, p2);
     }
 
     public void inciarCombate(Personaje p1, Personaje p2){
         int cont = 0;
         while (this.p1.getVida() > 0 && this.p2.getVida() > 0){
             System.out.println("Turno " + cont);
-            this.mostrarDatos();
+            mostrarDatos();
             cont++;
         };
     }
+
+    public
 
     public void mostrarDatos(){
         System.out.println("Vida p1: " + this.p1.getVida());
