@@ -4,7 +4,7 @@ import com.juego.modelo.Personaje;
 
 public interface Habilidad {
     int escalado(Personaje p);
-    void usar(Personaje objetivo);
+    void usar(Personaje enemigo, Personaje atacante);
     String getNombre();
     int getUsos();
     void setUsos(int usos);

@@ -95,12 +95,12 @@ public class DanioCC implements Habilidad{
     }
 
     @Override
-    public void usar(Personaje enemigo) {
+    public void usar(Personaje enemigo, Personaje atacante) {
         if (usos > 0) {
             int vidaActual = enemigo.getVida();
             enemigo.setVida(vidaActual - valor);
             usos--;
-            System.out.println(nombre + " ha golpeado a " + enemigo.getNombre() + " causando " + valor + " de daño.");
+            System.out.println(atacante.getNombre() + " ha usado " + nombre + " golpeando a " + enemigo.getNombre() + " causando " + valor + " de daño.");
         } else {
             System.out.println("No quedan usos de " + nombre);
         }
