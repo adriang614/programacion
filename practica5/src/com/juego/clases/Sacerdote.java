@@ -21,8 +21,8 @@ public class Sacerdote extends Clase implements IClase {
     public ArrayList<Habilidad> getHabilidades() {
         ArrayList result = new ArrayList<Habilidad>();
         //----------HABILIDADES SACERDOTE----------
-        DanioCC PuñetazoSagrado = new DanioCC("PuñetazoSagrado", 5, "el sacerdote reparte una hostia bendecida en toda la cara", 22, "fuerza");
-        DanioLD BibliaVoladora = new DanioLD("BibliaVoladora", 1, "Lanza una biblia a distancia con la fuerza de la fe", 34, "destreza");
+        DanioCC PuñetazoSagrado = new DanioCC("PuñetazoSagrado", 5, "el sacerdote reparte una hostia bendecida en toda la cara", 32, "fuerza");
+        DanioLD BibliaVoladora = new DanioLD("BibliaVoladora", 1, "Lanza una biblia a distancia con la fuerza de la fe", 44, "destreza");
         CuraCC RezoSanador = new CuraCC("RezoSanador", 3, "el sacerdote murmura una oracion y recupera vida gracias a su fe en dios", 28, "inteligencia");
 
         result.add(PuñetazoSagrado);

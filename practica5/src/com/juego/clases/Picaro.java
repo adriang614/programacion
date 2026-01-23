@@ -20,8 +20,8 @@ public class Picaro extends Clase implements IClase {
     public ArrayList<Habilidad> getHabilidades() {
         ArrayList result = new ArrayList<Habilidad>();
         //----------HABILIDADES PICARO----------
-        DanioCC ApuñaladaPorLaEspalda = new DanioCC("ApuñaladaPorLaEspalda", 5, "ataca por la espalda aprovechando un descuido del enemigo", 34, "fuerza");
-        DanioLD CuchilloVolador = new DanioLD("CuchilloVolador", 1, "lanza un cuchillo con gran precision desde la distancia", 30, "destreza");
+        DanioCC ApuñaladaPorLaEspalda = new DanioCC("ApuñaladaPorLaEspalda", 5, "ataca por la espalda aprovechando un descuido del enemigo", 44, "fuerza");
+        DanioLD CuchilloVolador = new DanioLD("CuchilloVolador", 1, "lanza un cuchillo con gran precision desde la distancia", 50, "destreza");
         CuraCC RobarVenda = new CuraCC("RobarVenda", 3, "roba una venda y se cura rapidamente", 18, "destreza");
 
         result.add(ApuñaladaPorLaEspalda);

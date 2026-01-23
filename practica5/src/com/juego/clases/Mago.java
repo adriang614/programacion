@@ -19,8 +19,8 @@ public class Mago extends Clase implements IClase {
     public ArrayList<Habilidad> getHabilidades() {
         ArrayList result = new ArrayList<Habilidad>();
         //----------HABILIDADES MAGO----------
-        DanioCC HechizoConcentrado = new DanioCC("HechizoConcentrado", 5, "El mago concentra su energia y golpea la mente del enemigo", 20, "inteligencia");
-        DanioLD HechizoPreciso = new DanioLD("HechizoPreciso", 1, "Lanza un hechizo a distancia con gran precision", 45, "inteligencia");
+        DanioCC HechizoConcentrado = new DanioCC("HechizoConcentrado", 5, "El mago concentra su energia y golpea la mente del enemigo", 30, "inteligencia");
+        DanioLD HechizoPreciso = new DanioLD("HechizoPreciso", 1, "Lanza un hechizo a distancia con gran precision", 55, "inteligencia");
         CuraCC ConjuroCurativo = new CuraCC("ConjuroCurativo", 3, "Restaura su vida mediante un conjuro en hebreo", 22, "inteligencia");
 
         result.add(HechizoConcentrado);

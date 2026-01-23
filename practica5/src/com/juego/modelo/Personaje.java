@@ -117,4 +117,8 @@ public class Personaje {
     public void setRaza(Raza raza) {
         this.raza = raza;
     }
+
+    public List<Habilidad> getHabilidades() {
+        return habilidades;
+    }
 }

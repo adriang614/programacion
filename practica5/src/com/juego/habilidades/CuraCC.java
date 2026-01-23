@@ -94,17 +94,29 @@ public class CuraCC implements Habilidad{
         return (int) Math.round(bonus);
     }
 
+
     @Override
-    public void usar(Personaje enemigo, Personaje atacante) {
+    public void usar(Personaje atacante, Personaje enemigo) {
         if (usos > 0) {
-            int vidaActual = enemigo.getVida();
-            enemigo.setVida(vidaActual - valor);
+
+            // Si la cura supera la vida máxima, no se aplica
+            if (atacante.getVida() + valor > atacante.getVidaMax()) {
+                System.out.println("No es posible superar la vida máxima utilizando la cura");
+                return; // salimos sin curar y sin restar usos
+            }
+
+            // Aplicamos la cura normal
+            atacante.setVida(atacante.getVida() + valor);
             usos--;
-            System.out.println( atacante.getNombre() + " ha usado " + nombre + " curandose " + valor + " de vida.");
+
+            System.out.println(atacante.getNombre() + " ha usado " + nombre + " curandose " + valor + " de vida.");
+
         } else {
             System.out.println("No quedan usos de " + nombre);
         }
     }
+
+
 
 }
 

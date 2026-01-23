@@ -20,8 +20,8 @@ public class Paladin extends Clase implements IClase {
     public ArrayList<Habilidad> getHabilidades() {
         ArrayList result = new ArrayList<Habilidad>();
         //----------HABILIDADES PALADIN----------
-        DanioCC GolpeDeJuramento = new DanioCC("GolpeDeJuramento", 5, "ataca con la fuerza de su juramento y su arma", 32, "fuerza");
-        DanioLD Veredicto = new DanioLD("Veredicto", 1, "señala al enemigo y una energia castigadora lo alcanza a distancia", 36, "inteligencia");
+        DanioCC GolpeDeJuramento = new DanioCC("GolpeDeJuramento", 5, "ataca con la fuerza de su juramento y su arma", 40, "fuerza");
+        DanioLD Veredicto = new DanioLD("Veredicto", 1, "señala al enemigo y una energia castigadora lo alcanza a distancia", 49, "inteligencia");
         CuraCC DisciplinaDeAcero = new CuraCC("DisciplinaDeAcero", 3, "se mantiene firme y recupera vida gracias a su entrenamiento", 24, "defensa");
 
         result.add(GolpeDeJuramento);

@@ -99,6 +99,7 @@ public class DanioLD implements Habilidad{
         if (usos > 0) {
             int vidaActual = enemigo.getVida();
             enemigo.setVida(vidaActual - valor);
+            usos--;
             System.out.println(atacante.getNombre() + " ha usado " + nombre + " golpeando a " + enemigo.getNombre() + " causando " + valor + " de daño.");
         } else {
             System.out.println("No quedan usos de " + nombre);

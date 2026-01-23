@@ -1,6 +1,7 @@
 package com.juego.modelo;
 
 import com.juego.clases.*;
+import com.juego.presentacion.Vista;
 import com.juego.razas.Elfo;
 import com.juego.razas.Enano;
 import com.juego.razas.Humano;
@@ -12,11 +13,12 @@ public class GestorPersonaje {
 
     //----------ATRIBUTOS----------
     private ArrayList<Personaje> personajes = new ArrayList<>();
+    private Vista vista;
 
 
     //----------CONSTRUCTOR----------
-    public GestorPersonaje (){
-
+    public GestorPersonaje (Vista vista){
+        this.vista = vista;
     }
 
 
@@ -28,10 +30,7 @@ public class GestorPersonaje {
 
         //----
 
-        System.out.println("SELECCIONA UNA RAZA PARA TU PERSONAJE");
-        System.out.println("1. Humano");
-        System.out.println("2. Enano");
-        System.out.println("3. Elfo");
+        vista.menuRazas();
         int opcion = 0;
         Raza razaElegida = null;
         while (razaElegida == null) {
@@ -54,15 +53,7 @@ public class GestorPersonaje {
 
         //----
 
-        System.out.println("SELECCIONA UNA CLASE PARA TU PERSONAJE");
-        System.out.println("1. Bardo");
-        System.out.println("2. Guerrero");
-        System.out.println("3. Paladin");
-        System.out.println("4. Monje");
-        System.out.println("5. Mago");
-        System.out.println("6. Picaro");
-        System.out.println("7. Druida");
-        System.out.println("8. Sacerdote");
+        vista.menuClases();
         int eleccion = 0;
         Clase claseElegida = null;
         while (claseElegida == null) {

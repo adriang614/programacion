@@ -20,8 +20,8 @@ public class Monje extends Clase implements IClase {
     public ArrayList<Habilidad> getHabilidades() {
         ArrayList result = new ArrayList<Habilidad>();
         //----------HABILIDADES MONJE----------
-        DanioCC PunoZen = new DanioCC("PunoZen", 5, "El monje concentra su ki y golpea con la fuerza de su espíritu", 24, "fuerza");
-        DanioLD LanzaChi = new DanioLD("LanzaChi", 1, "Proyecta un chorro de energía concentrada a distancia", 32, "destreza");
+        DanioCC PunoZen = new DanioCC("PunoZen", 5, "El monje concentra su ki y golpea con la fuerza de su espíritu", 34, "fuerza");
+        DanioLD LanzaChi = new DanioLD("LanzaChi", 1, "Proyecta un chorro de energía concentrada a distancia", 42, "destreza");
         CuraCC MeditacionCurativa = new CuraCC("MeditaciónCurativa", 3, "Se sienta en calma y recupera su propia vida y la de los aliados cercanos", 26, "inteligencia");
 
         result.add(PunoZen);

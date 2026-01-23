@@ -4,21 +4,19 @@ import com.juego.modelo.Personaje;
 
 public class Enano implements Raza {
 
-    @Override
-    public int getVidaBase() { return 110; }
+    private int vidaBase = 110;
+    private int fuerzaBase = 7;
+    private int destrezaBase = 4;
+    private int inteligenciaBase = 4;
+    private int defensaBase = 6;
+    private int rapidezBase = 4;
 
-    @Override
-    public int getFuerzaBase() { return 7; }
+    public Enano() {}
 
-    @Override
-    public int getDestrezaBase() { return 4; }
-
-    @Override
-    public int getInteligenciaBase() { return 4; }
-
-    @Override
-    public int getDefensaBase() { return 6; }
-
-    @Override
-    public int getRapidezBase() { return 4; }
+    @Override public int getVidaBase() { return vidaBase; }
+    @Override public int getFuerzaBase() { return fuerzaBase; }
+    @Override public int getDestrezaBase() { return destrezaBase; }
+    @Override public int getInteligenciaBase() { return inteligenciaBase; }
+    @Override public int getDefensaBase() { return defensaBase; }
+    @Override public int getRapidezBase() { return rapidezBase; }
 }
