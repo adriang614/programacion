@@ -1,6 +1,8 @@
 package com.juego.clases;
 
 import com.juego.habilidades.Habilidad;
+import com.juego.modelo.Personaje;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -85,5 +87,8 @@ public class Clase {
 
     public List<Habilidad> getHabilidades() {
         return habilidades;
+    }
+
+    public void aplicarbonificador(Personaje personaje) {
     }
 }

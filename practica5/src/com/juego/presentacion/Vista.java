@@ -98,9 +98,21 @@ public class Vista {
             System.out.println((i + 1) + " -> " + p.getHabilidades().get(i).getNombre());
         }
 
-        int opcion = sc.nextInt();
+        int opcion;
+
+        // Elegir una opción válida
+        do {
+            opcion = sc.nextInt();
+
+            if (opcion < 1 || opcion > p.getHabilidades().size()) {
+                System.out.println("Opción no válida. Inténtalo de nuevo.");
+            }
+
+        } while (opcion < 1 || opcion > p.getHabilidades().size());
+
         return p.getHabilidades().get(opcion - 1);
     }
+
 
     // ----- MENU ELEGIR PERSONAJE -----
     public Personaje elegirPersonaje(List<Personaje> personajes) {
@@ -114,4 +126,3 @@ public class Vista {
         return personajes.get(opcion - 1);
     }
 }
-

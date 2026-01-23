@@ -35,6 +35,7 @@ public class Personaje {
         this.vidaMax = clase.getVidaMax() + raza.getVidaBase();
         this.vida = this.vidaMax;
         this.habilidades = clase.getHabilidades();
+        clase.aplicarbonificador(this);
     }
 
     //----------GET Y SET----------
