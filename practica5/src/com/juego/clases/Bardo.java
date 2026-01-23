@@ -20,9 +20,9 @@ public class Bardo extends Clase implements IClase {
     public ArrayList<Habilidad> getHabilidades() {
         ArrayList result = new ArrayList<Habilidad>();
         //----------HABILIDADES BARDO----------
-        DanioCC PuaDeFuria = new DanioCC("PuaDeFuria", 5, "Golpea con la guitarra a ritmo de taconeo, desbordando fuerza y estilo", -25, "destreza");
-        DanioLD LamentoGitano = new DanioLD("LamentoGitano", 1, "Canta con fuerza y rabia, proyectando energia a distancia contra sus enemigos", -50, "destreza");
-        CuraCC SoloDelCanelita = new CuraCC("SoloDelCanelita", 3, "Canta con alma, devolviendo energia y vitalidad a si mismo", 30, "inteligencia");
+        DanioCC PuaDeFuria = new DanioCC("PuaDeFuria", 5, "Golpea con la guitarra a ritmo de taconeo, desbordando fuerza y estilo", -28, "destreza");
+        DanioLD LamentoGitano = new DanioLD("LamentoGitano", 1, "Canta con fuerza y rabia, proyectando energia a distancia contra sus enemigos", -52, "destreza");
+        CuraCC SoloDelCanelita = new CuraCC("SoloDelCanelita", 3, "Canta con alma, devolviendo energia y vitalidad a si mismo", 25, "inteligencia");
 
         result.add(PuaDeFuria);
         result.add(LamentoGitano);

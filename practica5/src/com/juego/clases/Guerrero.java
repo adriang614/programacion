@@ -5,7 +5,6 @@ import com.juego.habilidades.DanioCC;
 import com.juego.habilidades.DanioLD;
 import com.juego.habilidades.Habilidad;
 import com.juego.modelo.Personaje;
-
 import java.util.ArrayList;
 
 public class Guerrero extends Clase implements IClase {
@@ -17,13 +16,19 @@ public class Guerrero extends Clase implements IClase {
     //----------OBTENER HABILIDADES----------
     @Override
     public ArrayList<Habilidad> getHabilidades() {
+        ArrayList result = new ArrayList<Habilidad>();
         //----------HABILIDADES GUERRERO----------
-        DanioCC OstionGitano = new DanioCC("OstionGitano", 5, "Desata un golpe con toda su fuerza, demostrando coraje y disciplina", 25, "fuerza");
-        DanioLD EmbestidaDelLeón = new DanioLD("EmbestidaDelLeon", 1, "Carga con todo su cuerpo sobre el enemigo, rompiendo su línea defensiva", 30, "fuerza");
-        CuraCC Resiliencia = new CuraCC("Resiliencia", 3, "Se concentra en su fortaleza interior para recuperar energía y aguantar más", 21, "destreza");
+        DanioCC OstionGitano = new DanioCC("OstionGitano", 5, "Desata un golpe con toda su fuerza, demostrando coraje y disciplina", 30, "fuerza");
+        DanioLD EmbestidaDelLeon = new DanioLD("EmbestidaDelLeon", 1, "Carga con todo su cuerpo sobre el enemigo, rompiendo su línea defensiva", 38, "fuerza");
+        CuraCC Resiliencia = new CuraCC("Resiliencia", 3, "Se concentra en su fortaleza interior para recuperar energía y aguantar más", 20, "destreza");
 
-        return new ArrayList<Habilidad>();
+        result.add(OstionGitano);
+        result.add(EmbestidaDelLeon);
+        result.add(Resiliencia);
+
+        return result;
     }
+
 
     //----------APLICAR BONIFICADOR DE CLASE----------
     @Override

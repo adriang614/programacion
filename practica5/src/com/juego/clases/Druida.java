@@ -19,12 +19,19 @@ public class Druida extends Clase implements IClase {
     //----------OBTENER HABILIDADES----------
     @Override
     public ArrayList<Habilidad> getHabilidades() {
+        ArrayList result = new ArrayList<Habilidad>();
         //----------HABILIDADES DRUIDA----------
-        DanioCC ZarpazoVerde = new DanioCC("ZarpazoVerde", 5, "La druida ataca con garras llenas de energia natural, desgarrando al enemigo", 15, "fuerza");
-        DanioLD PitiHumeante = new DanioLD("PitiHumeante", 1, "Lanza una nube de humo concentrado que confunde y daña al enemigo desde la distancia", 43, "destreza");
-        CuraCC InfusionDeHierbas = new CuraCC("InfusionDeHierbas", 3, "Prepara una mezcla de hierbas que restaura la vida y la calma", 37, "defensa");
-        return new ArrayList<Habilidad>();
+        DanioCC ZarpazoVerde = new DanioCC("ZarpazoVerde", 5, "La druida ataca con garras llenas de energia natural, desgarrando al enemigo", 22, "fuerza");
+        DanioLD PitiHumeante = new DanioLD("PitiHumeante", 1, "Lanza una nube de humo concentrado que confunde y daña al enemigo desde la distancia", 40, "destreza");
+        CuraCC InfusionDeHierbas = new CuraCC("InfusionDeHierbas", 3, "Prepara una mezcla de hierbas que restaura la vida y la calma", 28, "defensa");
+
+        result.add(ZarpazoVerde);
+        result.add(PitiHumeante);
+        result.add(InfusionDeHierbas);
+
+        return result;
     }
+
 
     //----------APLICAR BONIFICADOR DE CLASE----------
     @Override

@@ -23,7 +23,7 @@ public class Personaje {
 
 
     //----------CONSTRUCTOR----------
-    public Personaje(String nombre, Raza raza, Clase clase,) {
+    public Personaje(String nombre, Raza raza, Clase clase) {
         this.nombre = nombre;
         this.raza = raza;
         this.clase = clase;

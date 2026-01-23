@@ -72,11 +72,6 @@ public class CuraCC implements Habilidad{
     }
 
     @Override
-    public boolean usar() {
-        return false;
-    }
-
-    @Override
     public int escalado(Personaje p) {
         double bonus = 0;
         switch (escalabilidad){
@@ -98,5 +93,18 @@ public class CuraCC implements Habilidad{
         }
         return (int) Math.round(bonus);
     }
+
+    @Override
+    public void usar(Personaje enemigo) {
+        if (usos > 0) {
+            int vidaActual = enemigo.getVida();
+            enemigo.setVida(vidaActual - valor);
+            usos--;
+            System.out.println(nombre + " ha golpeado a " + enemigo.getNombre() + " causando " + valor + " de daño.");
+        } else {
+            System.out.println("No quedan usos de " + nombre);
+        }
+    }
+
 }
 

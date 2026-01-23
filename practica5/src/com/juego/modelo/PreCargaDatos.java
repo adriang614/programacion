@@ -12,8 +12,7 @@ public class PreCargaDatos {
 
     //----------CONSTRUCTOR----------
     public PreCargaDatos() {
-        personajes.add(new Personaje("Adrián"));
-        personajes.add(new Personaje("Carlos", new Druida(), new Elfo()));
+
     }
 
     //----------GET----------

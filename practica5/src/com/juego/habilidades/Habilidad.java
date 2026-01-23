@@ -3,6 +3,9 @@ package com.juego.habilidades;
 import com.juego.modelo.Personaje;
 
 public interface Habilidad {
-    boolean usar();
     int escalado(Personaje p);
+    void usar(Personaje objetivo);
+    String getNombre();
+    int getUsos();
+    void setUsos(int usos);
 }
