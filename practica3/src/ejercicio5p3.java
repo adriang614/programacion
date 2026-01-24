@@ -6,7 +6,7 @@
 // la suma total de todas las filas y columnas
 // la suma de todas las columnas
 // la suma de todas las filas.
-public class ejercicio5 {
+public class ejercicio5p3 {
     public static void main (String[] args){
         int filas = 6;
         int columnas = 10;

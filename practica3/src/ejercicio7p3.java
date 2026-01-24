@@ -11,7 +11,7 @@
 
 import java.util.Scanner;
 
-public class ejercicio7 {
+public class ejercicio7p3 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
