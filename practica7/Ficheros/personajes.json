@@ -1,0 +1,8 @@
+[
+  {
+    "nombre": "Aragorn",
+    "raza": "Humano",
+    "nivel": 20,
+    "equipoIds": ["E01"]
+  }
+]
