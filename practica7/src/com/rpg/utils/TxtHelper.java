@@ -1,5 +1,7 @@
 package com.rpg.utils;
 
+import com.rpg.model.Ciudad;
+
 import java.io.*;
 
 public class TxtHelper {
@@ -27,7 +29,7 @@ public class TxtHelper {
         }
     }
 
-    public void escribirFichero() {
+    public void escribirFichero(Ciudad c) {
             try (var file = new BufferedWriter(new FileWriter("practica7/Ficheros/ciudades.txt", true))) {
                 for (int i = 1; i <= 10; i++) {
                     file.write("BW. Línea nº " + i);
