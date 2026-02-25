@@ -4,6 +4,7 @@ import java.io.FileNotFoundException;
 
 public class Main {
     public static void main (String[] args) throws FileNotFoundException {
-        TxtHelper tH = new TxtHelper();
+        TxtHelper th = new TxtHelper();
+        th.escribirFichero();
     }
 }

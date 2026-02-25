@@ -1,3 +1,12 @@
 # Nombre;Poblacion;Clima;Riesgo
 Minas Tirith;20000;Soleado;3
-Isengard;5000;Nublado;8
+Isengard;5000;Nublado;8BW. Línea nº 1
+BW. Línea nº 2
+BW. Línea nº 3
+BW. Línea nº 4
+BW. Línea nº 5
+BW. Línea nº 6
+BW. Línea nº 7
+BW. Línea nº 8
+BW. Línea nº 9
+BW. Línea nº 10

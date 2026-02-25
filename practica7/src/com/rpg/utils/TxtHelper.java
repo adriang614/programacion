@@ -11,7 +11,6 @@ public class TxtHelper {
         this.file = new File("practica7/Ficheros/ciudades.txt");
         this.fr = new FileReader(file);
         this.br = new BufferedReader(fr);
-        leerLinea();
     }
 
     public void leerLinea() {
@@ -26,5 +25,17 @@ public class TxtHelper {
         } catch (IOException e) {
             System.out.println("No se ha podido abrir el fichero.");
         }
+    }
+
+    public void escribirFichero() {
+            try (var file = new BufferedWriter(new FileWriter("practica7/Ficheros/ciudades.txt", true))) {
+                for (int i = 1; i <= 10; i++) {
+                    file.write("BW. Línea nº " + i);
+                    file.newLine();
+                }
+                System.out.println("Escritura realizada.");
+            } catch (IOException e) {
+                System.out.println("No se ha podido escribir en el fichero.");
+            }
     }
 }
