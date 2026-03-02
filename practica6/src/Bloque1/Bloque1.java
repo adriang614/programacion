@@ -53,6 +53,10 @@ public class Bloque1 {
 
         //Mostrar el valor de una clave (mostrar la cantidad de oro usando el nombre del aventurero)
         System.out.println("La cantidad de oro del aventurero Juan es: " + mapa1.get("Juan"));
+
+        for (Map.Entry<String, Integer> e : mapa1.entrySet()) {
+            System.out.println(e.getKey() + "->" + e.getValue());
+        }
     }
 
     public void limpiezaDelCalabozo() {
@@ -65,6 +69,8 @@ public class Bloque1 {
 
         System.out.println("Se ha eliminado el elemento mas antiguo y se ha añadido el nuevo elemento al final de la lista correctamente");
     }
+
+
 
     public void mercadoDeHechizos() {
 

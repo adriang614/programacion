@@ -20,9 +20,9 @@ public class TxtHelper {
             var file = new BufferedReader(new FileReader("practica7/Ficheros/ciudades.txt"));
 
             String linea;
-            while((linea = file.readLine()) != null)
+            while((linea = file.readLine()) != null) {
                 System.out.println(linea);
-
+                }
             file.close();
         } catch (IOException e) {
             System.out.println("No se ha podido abrir el fichero.");
