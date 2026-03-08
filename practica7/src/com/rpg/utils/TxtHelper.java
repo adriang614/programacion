@@ -38,8 +38,8 @@ public class TxtHelper {
                 file.newLine();
 
                 System.out.println("Escritura realizada.");
-            } catch (FormatoInvalidoException e) {
-                e;
+            } catch (IOException e) {
+                throw new RuntimeException(e);
             }
     }
 }
