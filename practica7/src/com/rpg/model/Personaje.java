@@ -1,18 +1,21 @@
 package com.rpg.model;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 
 public class Personaje {
     private String nombre;
     private String raza;
     private int nivel;
-    private List<Item> equipo;
+    private HashMap<String, Item> items;
 
-    public Personaje(String nombre, String raza, int nivel, List<Item> equipo) {
+    public Personaje(String nombre, String raza, int nivel) {
         this.nombre = nombre;
         this.raza = raza;
         this.nivel = nivel;
-        this.equipo = equipo;
+        this.items = new HashMap<String, Item>();
     }
 
     // Getters y setters
@@ -40,11 +43,11 @@ public class Personaje {
         this.nivel = nivel;
     }
 
-    public List<Item> getEquipo() {
-        return equipo;
-    }
+    /*public List<Item> getItems() {
+        return items;
+    }*/
 
     public void setEquipo(List<Item> equipo) {
-        this.equipo = equipo;
+        this.items = items;
     }
 }

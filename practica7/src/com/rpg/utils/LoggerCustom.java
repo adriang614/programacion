@@ -9,7 +9,7 @@ public class LoggerCustom {
 
 
 
-    public static void log(String tipo, String mensaje) {
+    public static void escribirLog (String tipo, String mensaje) {
         try (FileWriter fw = new FileWriter("practica7/Ficheros/errores.log", true)) {
 
             fw.write("[" + LocalDateTime.now() + "] [" + tipo + "]" + mensaje );
@@ -19,7 +19,4 @@ public class LoggerCustom {
         }
     }
 
-    public static void escribirFichero {
-
-    }
     }

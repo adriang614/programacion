@@ -1,4 +1,4 @@
-package com.rpg.utils;
+/*package com.rpg.utils;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -49,4 +49,6 @@ public class JsonHelper {
         }
     }
 }
+*/
+
 
