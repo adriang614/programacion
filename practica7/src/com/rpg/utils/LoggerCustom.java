@@ -7,16 +7,19 @@ import java.time.format.DateTimeFormatter;
 
 public class LoggerCustom {
 
-    public static void log(String mensaje) {
+
+
+    public static void log(String tipo, String mensaje) {
         try (FileWriter fw = new FileWriter("practica7/Ficheros/errores.log", true)) {
 
-            String timestamp = LocalDateTime.now()
-                    .format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
-
-            fw.write("[" + timestamp + "] ERROR: " + mensaje + "\n");
+            fw.write("[" + LocalDateTime.now() + "] [" + tipo + "]" + mensaje );
 
         } catch (IOException e) {
             System.out.println("No se pudo escribir en errores.log");
         }
     }
-}
+
+    public static void escribirFichero {
+
+    }
+    }
