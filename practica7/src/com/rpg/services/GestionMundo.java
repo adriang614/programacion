@@ -1,8 +1,11 @@
 package com.rpg.services;
 
 import com.rpg.handler.RecursoNoEncontradoException;
+import com.rpg.handler.ValidadorBiomas;
 import com.rpg.model.*;
 import com.rpg.utils.*;
+
+import java.io.IOException;
 import java.util.*;
 
 public class GestionMundo {
@@ -41,6 +44,7 @@ public class GestionMundo {
 
         //Se vinculan los items con lso personajes
         vincularItemsAPersonajes();
+        analizadorBiomas();
     }
 
     public void vincularItemsAPersonajes() {
@@ -74,8 +78,37 @@ public class GestionMundo {
         }
     }
 
-    public void crearNuevoPersonaje(String nombre, String raza, int nivel, String idItemInicial) {
-        Personaje p = new Personaje(nombre, raza, nivel);
+    public void analizadorBiomas() {
+        List<Personaje> personajesABorrar = new ArrayList<>();
+         {for (Personaje p : personajes)
+            try {
+                // Enano en el Desierto
+                if (p.getRaza().equals("enano") && p.getCiudad().getClima().equals("desertico")) {
+                    throw new ValidadorBiomas("BIOMA INVÁLIDO: El enano " + p.getNombre() + " no puede estar en el desierto.");
+                }
+
+                // Item de Hielo en Volcán
+                for (Item item : p.getEquipo()) {
+                    //  tipo en el catálogo
+                    Item real = catalogoItems.get(item.getId());
+                    if (real != null && real.getTipo().equals("HIELO") && p.getCiudad().getClima().equals("volcanico")) {
+                        personajesABorrar.add(p);
+                        throw new ValidadorBiomas("BIOMA INVÁLIDO: El item " + real.getNombre() + " se derrite en clima volcánico.");
+                    }
+                }
+
+            } catch (ValidadorBiomas e) {
+                LoggerCustom.escribirLog("ERROR_BIOMA", e.getMessage());
+                System.out.println("Alerta de Bioma: " + e.getMessage());
+            }
+        }
+
+        personajes.removeAll(personajesABorrar);
+        LoggerCustom.escribirLog("INFO", "Análisis de biomas completado.");
+    }
+
+    public void crearNuevoPersonaje(String nombre, String raza, int nivel, String idItemInicial, Ciudad ciudad) {
+        Personaje p = new Personaje(nombre, raza, nivel, ciudad);
 
         // Se busca el item que el usuario quiers darle
         if (this.catalogoItems.containsKey(idItemInicial)) {
@@ -95,10 +128,12 @@ public class GestionMundo {
         this.personajes.add(p);
     }
 
+
+
     public void interactuarCrearPersonaje() {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("--- CREACIÓN DE NUEVO PERSONAJE ---");
+        System.out.println("\n--- CREACIÓN DE NUEVO PERSONAJE ---");
 
         System.out.print("Nombre del personaje: ");
         String nombre = sc.nextLine();
@@ -121,7 +156,18 @@ public class GestionMundo {
         System.out.print("ID del ítem inicial (ej: W01): ");
         String idItem = sc.nextLine();
 
-        crearNuevoPersonaje(nombre, raza, nivel, idItem);
+        System.out.println("\nSelecciona la ciudad donde aparecerá:");
+        for (int i = 0; i < ciudades.size(); i++) {
+            System.out.println(i + ". " + ciudades.get(i).getNombre() + " (Clima: " + ciudades.get(i).getClima() + ")");
+        }
+
+        System.out.print("Elige el número de la ciudad: ");
+        int numCiudad = Integer.parseInt(sc.nextLine());
+        Ciudad ciudadElegida = ciudades.get(numCiudad);
+
+        crearNuevoPersonaje(nombre, raza, nivel, idItem, ciudadElegida);
+
+        analizadorBiomas();
     }
 
     public void guardarYSalir() {

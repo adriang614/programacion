@@ -1,4 +1,5 @@
 [
   { "id": "W01", "nombre": "Hacha Doble", "tipo": "ARMA", "valor": 100 },
-  { "id": "P01", "nombre": "Pocion", "tipo": "CONSUMIBLE", "valor": 25 }
+  { "id": "P01", "nombre": "Pocion", "tipo": "CONSUMIBLE", "valor": 25},
+  { "id": "H01", "nombre": "Hielo", "tipo": "HIELO", "valor": 25}
 ]

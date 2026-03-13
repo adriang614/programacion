@@ -5,6 +5,7 @@ public class Item {
     private String nombre;
     private String tipo;
     private int valor;
+    private Ciudad ciudad;
 
     public Item(String id, String nombre, String tipo, int valor) {
         this.id = id;
@@ -45,5 +46,6 @@ public class Item {
     public void setValor(int valor) {
         this.valor = valor;
     }
+
 }
 

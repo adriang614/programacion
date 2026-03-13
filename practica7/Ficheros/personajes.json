@@ -5,69 +5,23 @@
     "nivel": 21,
     "equipo": [
       {
-        "id": "W01",
+        "id": "H01",
         "nombre": "Hacha Doble",
-        "tipo": "ARMA",
+        "tipo": "HIELO",
         "valor": 100
       }
-    ]
+    ],
+    "ciudad": {
+      "nombre": "Isengard",
+      "poblacion": 5000,
+      "clima": "volcanico",
+      "nivelRiesgo": 8
+    }
   },
   {
-    "nombre": "as",
-    "raza": "jf",
-    "nivel": 21,
-    "equipo": [
-      {
-        "id": "W01",
-        "nombre": "Hacha Doble",
-        "tipo": "ARMA",
-        "valor": 100
-      }
-    ]
-  },
-  {
-    "nombre": "ASF",
-    "raza": "SDF",
-    "nivel": 3,
-    "equipo": [
-      {
-        "id": "W01",
-        "nombre": "Hacha Doble",
-        "tipo": "ARMA",
-        "valor": 100
-      }
-    ]
-  },
-  {
-    "nombre": "p",
-    "raza": "f",
-    "nivel": -3,
-    "equipo": [
-      {
-        "id": "W01",
-        "nombre": "Hacha Doble",
-        "tipo": "ARMA",
-        "valor": 100
-      }
-    ]
-  },
-  {
-    "nombre": "F",
-    "raza": "f",
-    "nivel": 1,
-    "equipo": [
-      {
-        "id": "W01",
-        "nombre": "Hacha Doble",
-        "tipo": "ARMA",
-        "valor": 100
-      }
-    ]
-  },
-  {
-    "nombre": "adrian",
+    "nombre": "jose",
     "raza": "enano",
-    "nivel": 1,
+    "nivel": 4,
     "equipo": [
       {
         "id": "W01",
@@ -75,6 +29,12 @@
         "tipo": "ARMA",
         "valor": 100
       }
-    ]
+    ],
+    "ciudad": {
+      "nombre": "Minas Tirith",
+      "poblacion": 20000,
+      "clima": "desertico",
+      "nivelRiesgo": 3
+    }
   }
 ]

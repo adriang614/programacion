@@ -14,3 +14,25 @@
 [13/03/2026 02:30:13] [DatoInvalidoException] Error de formato numérico en línea: Isengard;5000;Nublado;8BW. Línea nº 1
 [13/03/2026 02:30:35] [DatoInvalidoException] Error de formato numérico en línea: Isengard;5000;Nublado;8BW. Línea nº 1
 [13/03/2026 02:32:14] [DatoInvalidoException] Error de formato numérico en línea: Isengard;5000;Nublado;8BW. Línea nº 1
+[13/03/2026 10:26:37] [ERROR_BIOMA] BIOMA INVÁLIDO: El enano pepe no puede estar en el desierto.
+[13/03/2026 10:26:37] [INFO] Análisis de biomas completado.
+[13/03/2026 10:30:32] [ERROR_BIOMA] BIOMA INVÁLIDO: El enano pepe no puede estar en el desierto.
+[13/03/2026 10:30:32] [INFO] Análisis de biomas completado.
+[13/03/2026 10:31:32] [ERROR_BIOMA] BIOMA INVÁLIDO: El enano juan no puede estar en el desierto.
+[13/03/2026 10:31:32] [INFO] Análisis de biomas completado.
+[13/03/2026 10:38:24] [ERROR_BIOMA] BIOMA INVÁLIDO: El enano jose no puede estar en el desierto.
+[13/03/2026 10:39:03] [ERROR_BIOMA] BIOMA INVÁLIDO: El enano jose no puede estar en el desierto.
+[13/03/2026 10:42:15] [ERROR_BIOMA] BIOMA INVÁLIDO: El enano jose no puede estar en el desierto.
+[13/03/2026 10:47:16] [ERROR_BIOMA] BIOMA INVÁLIDO: El enano jose no puede estar en el desierto.
+[13/03/2026 10:50:06] [ERROR_BIOMA] BIOMA INVÁLIDO: El enano jose no puede estar en el desierto.
+[13/03/2026 10:52:47] [ERROR_BIOMA] BIOMA INVÁLIDO: El enano jose no puede estar en el desierto.
+[13/03/2026 10:52:47] [INFO] Análisis de biomas completado.
+[13/03/2026 10:53:22] [ERROR_BIOMA] BIOMA INVÁLIDO: El enano jose no puede estar en el desierto.
+[13/03/2026 10:53:22] [INFO] Análisis de biomas completado.
+[13/03/2026 10:55:36] [ERROR_BIOMA] BIOMA INVÁLIDO: El enano jose no puede estar en el desierto.
+[13/03/2026 10:55:36] [INFO] Análisis de biomas completado.
+[13/03/2026 11:00:03] [ERROR_BIOMA] BIOMA INVÁLIDO: El enano jose no puede estar en el desierto.
+[13/03/2026 11:00:03] [INFO] Análisis de biomas completado.
+[13/03/2026 11:02:17] [ERROR_BIOMA] BIOMA INVÁLIDO: El item Hielo se derrite en clima volcánico.
+[13/03/2026 11:02:17] [ERROR_BIOMA] BIOMA INVÁLIDO: El enano jose no puede estar en el desierto.
+[13/03/2026 11:02:17] [INFO] Análisis de biomas completado.

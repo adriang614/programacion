@@ -1,8 +1,6 @@
 package com.rpg.model;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 
 public class Personaje {
@@ -10,12 +8,14 @@ public class Personaje {
     private String raza;
     private int nivel;
     private List<Item> equipo = new ArrayList<>();
+    private Ciudad ciudad;
 
-    public Personaje(String nombre, String raza, int nivel) {
+    public Personaje(String nombre, String raza, int nivel, Ciudad ciudad) {
         this.nombre = nombre;
         this.raza = raza;
         this.nivel = nivel;
         this.equipo = new ArrayList<>();
+        this.ciudad = ciudad;
     }
 
     // Getters y setters
@@ -49,6 +49,14 @@ public class Personaje {
 
     public void setEquipo(List<Item> items) {
         this.equipo = items;
+    }
+
+    public Ciudad getCiudad() {
+        return ciudad;
+    }
+
+    public void setCiudad(Ciudad ciudad) {
+        this.ciudad = ciudad;
     }
 
     public void agregarItem(Item nuevoItem) {
