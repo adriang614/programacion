@@ -1,54 +1,55 @@
-/*package com.rpg.utils;
+package com.rpg.utils;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
-
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.lang.reflect.Type;
+import java.util.ArrayList;
 import java.util.List;
 
 public class JsonHelper {
 
-    private final Gson gson;
+    private Gson gson;
 
     public JsonHelper() {
+        // El PrettyPrinting es para que el .json no sea una sola línea
         this.gson = new GsonBuilder().setPrettyPrinting().create();
     }
 
-    // -----------------------------
-    // LECTURA DE LISTAS
-    // -----------------------------
-    public <T> List<T> readList(String path, Class<T> clazz) {
+    // <T> = genérico"
+    public <T> List<T> readList(String ruta, Class<T> clase) {
+        try (FileReader reader = new FileReader(ruta)) {
 
-        try (FileReader reader = new FileReader(path)) {
+            // TypeToken crea una lista de el tipo que sea"
+            Type tipoLista = TypeToken.getParameterized(List.class, clase).getType();
 
-            Type tipoLista = TypeToken.getParameterized(List.class, clazz).getType();
+            // GSON lee el archivo y lo convierte en esa lista
+            List<T> resultado = gson.fromJson(reader, tipoLista);
 
-            return gson.fromJson(reader, tipoLista);
+            // Si el archivo está vacío, GSON devuelve null.
+            // Si es null, se devuelve una lista vacía para evitar errores
+            if (resultado != null) {
+                return resultado;
+            }
+            else {
+                return new ArrayList<>();
+            }
 
         } catch (IOException e) {
-            LoggerCustom.log("No se pudo leer el archivo JSON: " + path);
-            return List.of(); // lista vacía para no romper el programa
+            LoggerCustom.escribirLog("RecursoNoEncontradoException", "No se pudo leer el JSON: " + ruta);
+            return new ArrayList<>();
         }
     }
 
-    // -----------------------------
-    // ESCRITURA DE LISTAS
-    // -----------------------------
     public <T> void writeList(String path, List<T> lista) {
-
         try (FileWriter writer = new FileWriter(path)) {
-
+            // Convierte la lista a texto JSON
             gson.toJson(lista, writer);
-
         } catch (IOException e) {
-            LoggerCustom.log("No se pudo escribir en el archivo JSON: " + path);
+            LoggerCustom.escribirLog("RPGDataException", "No se pudo escribir en el JSON: " + path);
         }
     }
 }
-*/
-
-

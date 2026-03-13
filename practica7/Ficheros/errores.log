@@ -1,1 +1,16 @@
-[2026-03-11T23:24:59.148615700] [ERROR]Número negativo en # Nombre;Poblacion;Clima;Riesgo[2026-03-11T23:24:59.154615200] [ERROR]Número negativo en Isengard;5000;Nublado;8BW. Línea nº 1[2026-03-11T23:24:59.154615200] [ERROR]Línea corrupta en [2026-03-11T23:24:59.154615200] [ERROR]Número negativo en Jerez ; 1 ; Hot ; 100[2026-03-11T23:24:59.154615200] [ERROR]Número negativo en Jerez ; 1 ; Hot ; 100
+[13/03/2026 02:06:34] [DatoInvalidoException] Error de formato numérico en línea: Isengard;5000;Nublado;8BW. Línea nº 1
+[13/03/2026 02:06:44] [DatoInvalidoException] Error de formato numérico en línea: Isengard;5000;Nublado;8BW. Línea nº 1
+[13/03/2026 02:07:37] [DatoInvalidoException] Error de formato numérico en línea: Isengard;5000;Nublado;8BW. Línea nº 1
+[13/03/2026 02:13:59] [DatoInvalidoException] Error de formato numérico en línea: Isengard;5000;Nublado;8BW. Línea nº 1
+[13/03/2026 02:13:59] [RecursoNoEncontradoException] No se pudo asignar el item inicial 'W02' a Legolas porque no existe en el catálogo
+[13/03/2026 02:14:27] [DatoInvalidoException] Error de formato numérico en línea: Isengard;5000;Nublado;8BW. Línea nº 1
+[13/03/2026 02:17:09] [DatoInvalidoException] Error de formato numérico en línea: Isengard;5000;Nublado;8BW. Línea nº 1
+[13/03/2026 02:24:14] [DatoInvalidoException] Error de formato numérico en línea: Isengard;5000;Nublado;8BW. Línea nº 1
+[13/03/2026 02:25:46] [DatoInvalidoException] Error de formato numérico en línea: Isengard;5000;Nublado;8BW. Línea nº 1
+[13/03/2026 02:26:46] [DatoInvalidoException] Error de formato numérico en línea: Isengard;5000;Nublado;8BW. Línea nº 1
+[13/03/2026 02:27:56] [DatoInvalidoException] Error de formato numérico en línea: Isengard;5000;Nublado;8BW. Línea nº 1
+[13/03/2026 02:28:35] [DatoInvalidoException] Error de formato numérico en línea: Isengard;5000;Nublado;8BW. Línea nº 1
+[13/03/2026 02:29:52] [DatoInvalidoException] Error de formato numérico en línea: Isengard;5000;Nublado;8BW. Línea nº 1
+[13/03/2026 02:30:13] [DatoInvalidoException] Error de formato numérico en línea: Isengard;5000;Nublado;8BW. Línea nº 1
+[13/03/2026 02:30:35] [DatoInvalidoException] Error de formato numérico en línea: Isengard;5000;Nublado;8BW. Línea nº 1
+[13/03/2026 02:32:14] [DatoInvalidoException] Error de formato numérico en línea: Isengard;5000;Nublado;8BW. Línea nº 1

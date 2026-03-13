@@ -1,6 +1,6 @@
 # Nombre;Poblacion;Clima;Riesgo
 Minas Tirith;20000;Soleado;3
-Isengard;5000;Nublado;8BW. Línea nº 1
+Isengard;5000;Nublado;8
 
 Jerez ; 1 ; Hot ; 100
 Jerez ; 1 ; Hot ; 100

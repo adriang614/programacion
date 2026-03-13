@@ -1,12 +1,12 @@
 package com.rpg.model;
 
 public class Item {
-    private int id;
+    private String id;
     private String nombre;
     private String tipo;
-    private double valor;
+    private int valor;
 
-    public Item(int id, String nombre, String tipo, double valor) {
+    public Item(String id, String nombre, String tipo, int valor) {
         this.id = id;
         this.nombre = nombre;
         this.tipo = tipo;
@@ -14,11 +14,11 @@ public class Item {
     }
 
     // Getters y setters
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -38,11 +38,11 @@ public class Item {
         this.tipo = tipo;
     }
 
-    public double getValor() {
+    public int getValor() {
         return valor;
     }
 
-    public void setValor(double valor) {
+    public void setValor(int valor) {
         this.valor = valor;
     }
 }

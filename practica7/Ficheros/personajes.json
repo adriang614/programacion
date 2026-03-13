@@ -1,8 +1,80 @@
 [
   {
-    "nombre": "Aragorn",
-    "raza": "Humano",
-    "nivel": 20,
-    "equipoIds": ["E01"]
+    "nombre": "Paco",
+    "raza": "Elfo",
+    "nivel": 21,
+    "equipo": [
+      {
+        "id": "W01",
+        "nombre": "Hacha Doble",
+        "tipo": "ARMA",
+        "valor": 100
+      }
+    ]
+  },
+  {
+    "nombre": "as",
+    "raza": "jf",
+    "nivel": 21,
+    "equipo": [
+      {
+        "id": "W01",
+        "nombre": "Hacha Doble",
+        "tipo": "ARMA",
+        "valor": 100
+      }
+    ]
+  },
+  {
+    "nombre": "ASF",
+    "raza": "SDF",
+    "nivel": 3,
+    "equipo": [
+      {
+        "id": "W01",
+        "nombre": "Hacha Doble",
+        "tipo": "ARMA",
+        "valor": 100
+      }
+    ]
+  },
+  {
+    "nombre": "p",
+    "raza": "f",
+    "nivel": -3,
+    "equipo": [
+      {
+        "id": "W01",
+        "nombre": "Hacha Doble",
+        "tipo": "ARMA",
+        "valor": 100
+      }
+    ]
+  },
+  {
+    "nombre": "F",
+    "raza": "f",
+    "nivel": 1,
+    "equipo": [
+      {
+        "id": "W01",
+        "nombre": "Hacha Doble",
+        "tipo": "ARMA",
+        "valor": 100
+      }
+    ]
+  },
+  {
+    "nombre": "adrian",
+    "raza": "enano",
+    "nivel": 1,
+    "equipo": [
+      {
+        "id": "W01",
+        "nombre": "Hacha Doble",
+        "tipo": "ARMA",
+        "valor": 100
+      }
+    ]
   }
 ]

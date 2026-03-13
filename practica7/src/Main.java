@@ -1,12 +1,11 @@
-import com.rpg.handler.RecursoNoEncontradoException;
-import com.rpg.model.Ciudad;
-import com.rpg.utils.TxtHelper;
-
-import java.io.FileNotFoundException;
+import com.rpg.services.GestionMundo;
 
 public class Main {
-    public static void main (String[] args) throws FileNotFoundException, RecursoNoEncontradoException {
-        TxtHelper th = new TxtHelper();
-        th.leerLineas();
+    public static void main(String[] args) {
+        GestionMundo juego = new GestionMundo();
+
+        juego.cargarDatos();
+        juego.interactuarCrearPersonaje();
+        juego.guardarYSalir();
     }
 }

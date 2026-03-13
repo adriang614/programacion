@@ -1,62 +1,56 @@
 package com.rpg.utils;
 
-import com.rpg.handler.DatoInvalidoException;
 import com.rpg.handler.FormatoInvalidoException;
 import com.rpg.handler.RecursoNoEncontradoException;
 import com.rpg.model.Ciudad;
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class TxtHelper {
-    private File file;
-    private FileReader fr;
-    private BufferedReader br;
 
-    public TxtHelper() throws FileNotFoundException {
-        this.file = new File("practica7/Ficheros/ciudades.txt");
-        this.fr = new FileReader(file);
-        this.br = new BufferedReader(fr);
-    }
-
-    //-----------------------------------------------------------------------------------------------------------------------------------------------
-
-
-    public List<Ciudad> leerLineas() throws RecursoNoEncontradoException {
+    public List<Ciudad> leerCiudades(String ruta) throws RecursoNoEncontradoException {
         List<Ciudad> ciudades = new ArrayList<>();
-        try (var file = new BufferedReader(new FileReader("practica7/Ficheros/ciudades.txt"))) {
 
+        try (BufferedReader br = new BufferedReader(new FileReader(ruta))) {
             String linea;
-            while ((linea = file.readLine()) != null) {
+            while ((linea = br.readLine()) != null) {
+
+                // Saltar líneas vacías o comentarios que empiecen por #
+                if (linea.trim().isEmpty() || linea.startsWith("#"))  {
+                    continue;
+                }
+
                 try {
-                    String [] partes = linea.split(";");
+                    String[] partes = linea.split(";");
 
                     if (partes.length != 4) {
-                        throw new FormatoInvalidoException("Linea equivocada: " + linea);
+                        throw new FormatoInvalidoException("Número de campos incorrecto (" + partes.length + ")");
                     }
 
-                    String nombre = partes [0];
-                    int poblacion = Integer.parseInt(partes[1]);
-                    String clima = partes[2];
-                    int nivelRiesgo = Integer.parseInt(partes[3]);
+                    // .trim() para que los espacios en blanco no den problema
+                    String nombre = partes[0].trim();
+                    int poblacion = Integer.parseInt(partes[1].trim());
+                    String clima = partes[2].trim();
+                    int nivelRiesgo = Integer.parseInt(partes[3].trim());
 
-                    Ciudad c = new Ciudad(nombre, poblacion, clima, nivelRiesgo);
-                    ciudades.add(c);
+                    ciudades.add(new Ciudad(nombre, poblacion, clima, nivelRiesgo));
+
                 }
 
                 catch (NumberFormatException e) {
-                    LoggerCustom.escribirLog("ERROR", "Número negativo en " + linea);
+                    LoggerCustom.escribirLog("DatoInvalidoException", "Error de formato numérico en línea: " + linea);
                 }
 
                 catch (FormatoInvalidoException e) {
-                    LoggerCustom.escribirLog("ERROR", "Línea corrupta en " + linea);
+                    LoggerCustom.escribirLog("FormatoInvalidoException", e.getMessage() + " en línea: " + linea);
                 }
             }
-            file.close();
-        } catch (IOException e) {
-            LoggerCustom.escribirLog("ERROR", "No se ha podido abrir el fichero");
-            throw new RecursoNoEncontradoException("No se ha podido abrir el fichero");
+        }
+        catch (IOException e) {
+            // Si el archivo no existe, esto sí es un error crítico
+            LoggerCustom.escribirLog("RecursoNoEncontradoException", "No se pudo abrir: " + ruta);
+            throw new RecursoNoEncontradoException("Fichero no encontrado: " + ruta);
         }
 
         return ciudades;

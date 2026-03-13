@@ -9,13 +9,13 @@ public class Personaje {
     private String nombre;
     private String raza;
     private int nivel;
-    private HashMap<String, Item> items;
+    private List<Item> equipo = new ArrayList<>();
 
     public Personaje(String nombre, String raza, int nivel) {
         this.nombre = nombre;
         this.raza = raza;
         this.nivel = nivel;
-        this.items = new HashMap<String, Item>();
+        this.equipo = new ArrayList<>();
     }
 
     // Getters y setters
@@ -43,11 +43,20 @@ public class Personaje {
         this.nivel = nivel;
     }
 
-    /*public List<Item> getItems() {
-        return items;
-    }*/
-
-    public void setEquipo(List<Item> equipo) {
-        this.items = items;
+    public List<Item> getEquipo() {
+        return equipo;
     }
+
+    public void setEquipo(List<Item> items) {
+        this.equipo = items;
+    }
+
+    public void agregarItem(Item nuevoItem) {
+        if (nuevoItem != null) {
+            this.equipo.add(nuevoItem);
+        }
+    }
+
 }
+
+
