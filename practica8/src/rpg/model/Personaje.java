@@ -28,6 +28,8 @@ public class Personaje {
         this.habilidades = new ArrayList<>();
     }
 
+    public Personaje() {}
+
     public int getId() {
         return id;
     }
