@@ -1,7 +1,11 @@
 package rpg.logic;
 
+import com.sun.jdi.connect.spi.Connection;
+import rpg.dao.ConnectionDB;
 import rpg.dao.InventarioDAO;
+import rpg.dao.PersonajeHabilidadDAO;
 import rpg.exception.FondosInsuficientesException;
+import rpg.exception.LimiteHabilidadesException;
 import rpg.model.Item;
 import rpg.model.Personaje;
 import rpg.model.Ciudad;
@@ -9,11 +13,13 @@ import rpg.dao.PersonajeDAO;
 import rpg.exception.NivelInsuficienteException;
 import rpg.utils.Log;
 
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.*;
 
 public class GestionMundo {
 
-     // Viajar de Ciudad.
+    // Viajar de Ciudad.
     public void viajar(Personaje p, Ciudad destino) throws NivelInsuficienteException {
         if (p.getNivel() < destino.getNivelMinimoAcceso()) {
             String errorMsg = "Nivel insuficiente para entrar en " + destino.getNombre() + " (Requerido: " + destino.getNivelMinimoAcceso() + ")";
@@ -132,4 +138,30 @@ public class GestionMundo {
             }
         }
     }
+
+
+
+    public void ejecutarRitual(List<Personaje> expedicion, int idClaseEvolucionada) {
+
+            Iterator<Personaje> it = expedicion.iterator();
+            PersonajeDAO po = new PersonajeDAO();
+
+            while (it.hasNext()) {
+                Personaje p = it.next();
+
+                if (p.getHabilidades().size() == 3) {
+
+                    if (p.getInventario().size() > 5) {
+                        po.ejecutarCambiosRitual(p.getId(), idClaseEvolucionada, false);
+                        p.getClase().setId(idClaseEvolucionada);
+                        p.setOro(p.getOro() - 50);
+                    }
+                    else if (p.getVidaActual() < p.getRaza().getBonificadorVida() * 0.10) {
+                        po.ejecutarCambiosRitual(p.getId(), null, true);
+                        it.remove();
+                    }
+                }
+            }
+    }
 }
+

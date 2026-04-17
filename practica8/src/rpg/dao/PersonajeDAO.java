@@ -10,6 +10,16 @@ public class PersonajeDAO {
 
     // METODO PARA INSERTAR (CREATE)
     public void insertar(Personaje p) {
+
+        int oroInicial;
+        if (p.getCiudadActual().getNivelMinimoAcceso() > 1) {
+            oroInicial = 500;
+        } else {
+            oroInicial = 100;
+        }
+
+        p.setOro(oroInicial);
+
         String sqlPersonaje = "INSERT INTO personajes (nombre, id_clase, id_raza, id_ciudad_actual, oro, nivel, vida_actual) VALUES (?, ?, ?, ?, ?, ?, ?)";
         String sqlHabilidades = "INSERT INTO personaje_habilidades (id_personaje, id_habilidad, equipada) " +
                 "SELECT ?, id, TRUE FROM habilidades WHERE id_clase = ? LIMIT 3";
@@ -39,9 +49,9 @@ public class PersonajeDAO {
                     }
                 }
                 conn.commit();
-                Log.escribirLog("INFO", "Personaje e habilidades iniciales creados: " + p.getNombre());
+                Log.escribirLog("INFO", "Personaje creado con " + oroInicial + " de oro inicial.");
             } catch (SQLException e) {
-                conn.rollback();
+                if (conn != null) conn.rollback();
                 throw e;
             }
         } catch (SQLException e) {
@@ -247,5 +257,31 @@ public class PersonajeDAO {
             Log.escribirLog("ERROR", "Error en obtenerPorId: " + e.getMessage());
         }
         return p;
+    }
+    //Ritual
+    public void ejecutarCambiosRitual(int idPersonaje, Integer nuevoIdClase, boolean esDestierro) {
+        String sql = "";
+
+        if (esDestierro) {
+            sql = "UPDATE personajes SET id_ciudad_actual = NULL WHERE id = ?";
+        } else {
+            sql = "UPDATE personajes SET id_clase = ?, oro = oro - 50 WHERE id = ?";
+        }
+
+        try (Connection conn = ConnectionDB.obtenerConexion();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            if (esDestierro) {
+                pstmt.setInt(1, idPersonaje);
+            } else {
+                pstmt.setInt(1, nuevoIdClase);
+                pstmt.setInt(2, idPersonaje);
+            }
+
+            pstmt.executeUpdate();
+
+        } catch (SQLException e) {
+            System.out.println("Error al ejecutar ritual: " + e.getMessage());
+        }
     }
 }

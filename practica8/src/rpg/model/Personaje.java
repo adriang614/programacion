@@ -112,4 +112,11 @@ public class Personaje {
         this.habilidades = habilidades;
     }
 
+    public List<Item> getInventario() {
+        return inventario;
+    }
+
+    public void setInventario(List<Item> inventario) {
+        this.inventario = inventario;
+    }
 }
