@@ -15,17 +15,13 @@ public class Personaje {
     private List<Item> inventario;
     private List<Habilidad> habilidades;
 
-    public Personaje(int id, String nombre, int nivel, int oro, int vidaActual, Raza raza, Clase clase, Ciudad ciudadActual) {
-        this.id = id;
+    public Personaje(String nombre, Raza raza, Clase clase) {
         this.nombre = nombre;
-        this.nivel = nivel;
-        this.oro = oro;
-        this.vidaActual = vidaActual;
         this.raza = raza;
         this.clase = clase;
-        this.ciudadActual = ciudadActual;
-        this.inventario = new ArrayList<>();
-        this.habilidades = new ArrayList<>();
+        this.nivel = 1;
+        this.oro = 100;
+        this.vidaActual = 150;
     }
 
     public Personaje() {}
@@ -107,4 +103,13 @@ public class Personaje {
                 ", ciudadActual=" + ciudadActual +
                 '}';
     }
+
+    public List<Habilidad>  getHabilidades() {
+        return habilidades;
+    }
+
+    public void setHabilidades (List<Habilidad> habilidades) {
+        this.habilidades = habilidades;
+    }
+
 }

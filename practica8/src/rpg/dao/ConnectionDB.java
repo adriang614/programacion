@@ -6,8 +6,7 @@ import java.sql.SQLException;
 import rpg.utils.Log;
 
 public class ConnectionDB {
-    // Datos de configuración obtenidos del docker-compose
-    // Cambia las líneas 10, 11 y 12 por estas:
+
     private static String URL = "jdbc:postgresql://localhost:5432/XRPG";
     private static String USER = "xrpg_user";
     private static String PASS = "xrpg_password";

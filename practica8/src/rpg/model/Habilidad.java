@@ -3,14 +3,14 @@ package rpg.model;
 public class Habilidad {
     private int id;
     private String nombre;
-    private int dañoBase;
+    private int danoBase;
     private int usosMaximos;
     private Clase clase;
 
     public Habilidad(int id, String nombre, int dañoBase, int usosMaximos, Clase clase) {
         this.id = id;
         this.nombre = nombre;
-        this.dañoBase = dañoBase;
+        this.danoBase = dañoBase;
         this.usosMaximos = usosMaximos;
         this.clase = clase;
     }
@@ -31,12 +31,12 @@ public class Habilidad {
         this.nombre = nombre;
     }
 
-    public int getDañoBase() {
-        return dañoBase;
+    public int getDanoBase() {
+        return danoBase;
     }
 
-    public void setDañoBase(int dañoBase) {
-        this.dañoBase = dañoBase;
+    public void setDanoBase(int danoBase) {
+        this.danoBase = danoBase;
     }
 
     public int getUsosMaximos() {
@@ -60,7 +60,7 @@ public class Habilidad {
         return "Habilidad{" +
                 "id=" + id +
                 ", nombre='" + nombre + '\'' +
-                ", dañoBase=" + dañoBase +
+                ", dañoBase=" + danoBase +
                 ", usosMaximos=" + usosMaximos +
                 ", clase=" + clase +
                 '}';

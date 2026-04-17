@@ -1,0 +1,152 @@
+[17/04/2026 00:14:01] [ERROR] No se pudo conectar a la base de datos: No suitable driver found for jdbc:postgresql://localhost:5432/XRPG
+[17/04/2026 00:15:37] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 00:15:38] [INFO] Cargadas 4 razas desde la BD.
+[17/04/2026 00:15:38] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 00:15:38] [INFO] Cargadas 4 clases de la base de datos.
+[17/04/2026 00:15:38] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 00:15:38] [INFO] Cargadas 4 ciudades desde la BD.
+[17/04/2026 00:15:38] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 00:15:38] [INFO] Personaje creado con éxito: Tester de Java 6
+[17/04/2026 00:15:38] [INFO] Conexión a la base de datos cerrada correctamente.
+[17/04/2026 03:10:32] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:10:32] [INFO] Se han listado 3 personajes.
+[17/04/2026 03:10:53] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:10:53] [INFO] Cargadas 4 razas desde la BD.
+[17/04/2026 03:10:59] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:10:59] [INFO] Cargadas 4 clases de la base de datos.
+[17/04/2026 03:11:05] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:11:05] [ERROR] Error en menú: Cannot invoke "rpg.model.Ciudad.getId()" because the return value of "rpg.model.Personaje.getCiudadActual()" is null
+[17/04/2026 03:14:23] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:14:23] [INFO] Cargadas 4 razas desde la BD.
+[17/04/2026 03:14:24] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:14:24] [INFO] Cargadas 4 clases de la base de datos.
+[17/04/2026 03:14:26] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:14:26] [INFO] Personaje creado con éxito: Adrian
+[17/04/2026 03:14:26] [INFO] Nuevo personaje creado: Adrian
+[17/04/2026 03:15:07] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:15:07] [INFO] Se han listado 4 personajes.
+[17/04/2026 03:15:27] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:15:27] [INFO] Cargadas 4 ciudades desde la BD.
+[17/04/2026 03:16:01] [ERROR] NivelInsuficienteException - Nivel insuficiente para entrar en Baluarte de Piedra (Requerido: 5)
+[17/04/2026 03:16:01] [ERROR] Error en menú: Nivel insuficiente para entrar en Baluarte de Piedra (Requerido: 5)
+[17/04/2026 03:16:08] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:16:08] [INFO] Se han listado 4 personajes.
+[17/04/2026 03:16:30] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:16:30] [INFO] Cargadas 4 ciudades desde la BD.
+[17/04/2026 03:16:33] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:16:33] [INFO] Eldara Sabia viajó a Baluarte de Piedra
+[17/04/2026 03:16:39] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:16:39] [INFO] Inventario cargado: 7 items disponibles.
+[17/04/2026 03:16:57] [ERROR] Intento de compra fallido: FondosInsuficientesException - El personaje Eldara Sabia no tiene suficiente oro. Requerido: 1200, Disponible: 800
+[17/04/2026 03:16:57] [ERROR] Error en menú: El personaje Eldara Sabia no tiene suficiente oro. Requerido: 1200, Disponible: 800
+[17/04/2026 03:17:04] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:17:04] [INFO] Inventario cargado: 7 items disponibles.
+[17/04/2026 03:17:08] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:17:08] [INFO] Oro actualizado para ID 2: 600 monedas.
+[17/04/2026 03:17:08] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:17:08] [INFO] Item ID 2 añadido al inventario del personaje 2
+[17/04/2026 03:17:08] [INFO] Compra exitosa: Eldara Sabia ha comprado 1x Espada de Hierro por 200 de oro.
+[17/04/2026 03:17:14] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:17:14] [INFO] Se han listado 4 personajes.
+[17/04/2026 03:17:14] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:17:14] [INFO] Oro actualizado para ID 1: 130 monedas.
+[17/04/2026 03:17:14] [INFO] Impuestos cobrados a Grog el Destructor
+[17/04/2026 03:17:14] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:17:14] [INFO] Oro actualizado para ID 3: 480 monedas.
+[17/04/2026 03:17:14] [INFO] Impuestos cobrados a Tester de Java 6
+[17/04/2026 03:17:14] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:17:14] [INFO] Oro actualizado para ID 4: 80 monedas.
+[17/04/2026 03:17:14] [INFO] Impuestos cobrados a Adrian
+[17/04/2026 03:17:14] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:17:14] [INFO] Oro actualizado para ID 2: 580 monedas.
+[17/04/2026 03:17:14] [INFO] Impuestos cobrados a Eldara Sabia
+[17/04/2026 03:17:29] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:17:29] [INFO] Se han listado 4 personajes.
+[17/04/2026 03:17:29] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:17:29] [INFO] Se han listado 4 personajes.
+[17/04/2026 03:17:29] [ERROR] Error en menú: Cannot invoke "rpg.model.Clase.getNombre()" because the return value of "rpg.model.Personaje.getClase()" is null
+[17/04/2026 03:24:21] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:24:21] [INFO] Se han listado 4 personajes.
+[17/04/2026 03:24:21] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:24:21] [INFO] Se han listado 4 personajes.
+[17/04/2026 03:27:35] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:27:35] [INFO] Se han cargado 4 personajes desde la base de datos.
+[17/04/2026 03:27:35] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:27:35] [INFO] Se han cargado 4 personajes desde la base de datos.
+[17/04/2026 03:27:44] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:27:44] [INFO] Se han cargado 4 personajes desde la base de datos.
+[17/04/2026 03:27:52] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:27:52] [INFO] Se han cargado 4 personajes desde la base de datos.
+[17/04/2026 03:27:52] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:27:52] [INFO] Oro actualizado para ID 1: 110 monedas.
+[17/04/2026 03:27:52] [INFO] Impuestos cobrados a Grog el Destructor
+[17/04/2026 03:27:52] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:27:52] [INFO] Oro actualizado para ID 3: 460 monedas.
+[17/04/2026 03:27:52] [INFO] Impuestos cobrados a Tester de Java 6
+[17/04/2026 03:27:52] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:27:52] [INFO] Oro actualizado para ID 4: 60 monedas.
+[17/04/2026 03:27:52] [INFO] Impuestos cobrados a Adrian
+[17/04/2026 03:27:52] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:27:52] [INFO] Oro actualizado para ID 2: 560 monedas.
+[17/04/2026 03:27:52] [INFO] Impuestos cobrados a Eldara Sabia
+[17/04/2026 03:27:52] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:28:03] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:28:03] [INFO] Se han cargado 4 personajes desde la base de datos.
+[17/04/2026 03:28:08] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:28:08] [INFO] Se han cargado 4 personajes desde la base de datos.
+[17/04/2026 03:28:12] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:28:12] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:28:12] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:28:12] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:28:12] [INFO] Inicio de combate: Adrian vs Eldara Sabia
+[17/04/2026 03:28:12] [ERROR] Error en menú: Cannot invoke "rpg.model.Raza.getBonificadorFuerza()" because the return value of "rpg.model.Personaje.getRaza()" is null
+[17/04/2026 03:33:08] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:33:08] [INFO] Se han cargado 4 personajes desde la base de datos.
+[17/04/2026 03:33:11] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:33:11] [INFO] Se han cargado 4 personajes desde la base de datos.
+[17/04/2026 03:33:14] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:33:14] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:33:14] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:33:14] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:33:14] [INFO] Inicio de combate: Adrian vs Eldara Sabia
+[17/04/2026 03:33:14] [ERROR] Error en menú: Cannot invoke "rpg.model.Raza.getBonificadorFuerza()" because the return value of "rpg.model.Personaje.getRaza()" is null
+[17/04/2026 03:34:48] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:34:48] [ERROR] Error al listar personajes: ERROR: column r.vida_base does not exist
+  Position: 93
+[17/04/2026 03:35:07] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:35:07] [INFO] Se han cargado 4 personajes desde la base de datos.
+[17/04/2026 03:36:28] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:36:28] [ERROR] Error al listar personajes: ERROR: column r.vida_base does not exist
+  Position: 93
+[17/04/2026 03:37:49] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:37:49] [INFO] Se han cargado 4 personajes.
+[17/04/2026 03:37:55] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:37:55] [INFO] Se han cargado 4 personajes.
+[17/04/2026 03:37:59] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:37:59] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:37:59] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:37:59] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:37:59] [INFO] Inicio de combate: Adrian vs Eldara Sabia
+[17/04/2026 03:38:43] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:38:43] [INFO] Oro actualizado para ID 2: 572 monedas.
+[17/04/2026 03:38:43] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:38:43] [INFO] Oro actualizado para ID 4: 48 monedas.
+[17/04/2026 03:38:43] [INFO] Ganador: Eldara Sabia roba 12 monedas a Adrian
+[17/04/2026 03:41:56] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:41:56] [INFO] Se han cargado 4 personajes.
+[17/04/2026 03:42:03] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:42:03] [INFO] Se han cargado 4 personajes.
+[17/04/2026 03:42:05] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:42:05] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:42:05] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:42:05] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:42:05] [INFO] Inicio de combate: Adrian vs Grog el Destructor
+[17/04/2026 03:56:18] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:56:18] [INFO] Se han cargado 4 personajes.
+[17/04/2026 03:56:23] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:56:23] [INFO] Se han cargado 4 personajes.
+[17/04/2026 03:56:25] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:56:25] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:56:25] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:56:25] [INFO] Conexión establecida con la base de datos XRPG.
+[17/04/2026 03:56:25] [INFO] Inicio de combate: Adrian vs Grog el Destructor

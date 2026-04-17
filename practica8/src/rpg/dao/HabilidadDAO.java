@@ -34,4 +34,26 @@ public class HabilidadDAO {
         }
         return lista;
     }
+
+    public List<Habilidad> obtenerHabilidadesPersonaje(int idPersonaje) {
+        List<Habilidad> lista = new ArrayList<>();
+        String sql = "SELECT h.* FROM Habilidades h " +
+                "JOIN Personajes_Habilidades ph ON h.id = ph.id_habilidad " +
+                "WHERE ph.id_personaje = ? AND ph.equipada_combate = TRUE";
+
+        try (Connection conn = ConnectionDB.obtenerConexion();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setInt(1, idPersonaje);
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next()) {
+                lista.add(new Habilidad(
+                        rs.getInt("id"), rs.getString("nombre"),
+                        rs.getInt("dano_base"), rs.getInt("usos_maximos"), null
+                ));
+            }
+        } catch (SQLException e) {
+            Log.escribirLog("ERROR", "Error al listar habilidades: " + e.getMessage());
+        }
+        return lista;
+    }
 }
