@@ -180,7 +180,6 @@ public class PersonajeDAO {
             pstmt.setInt(2, idPersonaje);
 
             pstmt.executeUpdate();
-            // El log se suele poner en la lógica, pero aquí confirma que el SQL fue OK
         } catch (SQLException e) {
             Log.escribirLog("ERROR", "Error SQL al cambiar de ciudad: " + e.getMessage());
         }
