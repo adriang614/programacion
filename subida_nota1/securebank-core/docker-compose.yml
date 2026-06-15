@@ -1,0 +1,39 @@
+version: '3.9'
+
+services:
+  securebank-db:
+    image: postgres:15
+    container_name: securebank_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: securebank_admin
+      POSTGRES_PASSWORD: Sb@nk2024$ecure
+      POSTGRES_DB: securebank_core
+      PGDATA: /var/lib/postgresql/data/pgdata
+      TZ: Europe/Madrid
+    ports:
+      - "5432:5432"
+    volumes:
+      - securebank_data:/var/lib/postgresql/data
+      - ./sql/init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U securebank_admin -d securebank_core"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    networks:
+      - securebank_network
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+networks:
+  securebank_network:
+    driver: bridge
+
+volumes:
+  securebank_data:
+    driver: local
